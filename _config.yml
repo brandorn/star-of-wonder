@@ -1,0 +1,10 @@
+# General
+title: A Sufjan Companion
+description: [ Sufjan Companion description]
+url: "http://sufjan.info"
+
+# Build settings
+markdown: kramdown
+
+# Other
+permalink: /:categories/:title

@@ -1,0 +1,87 @@
+figure {
+  margin: 2em 0;
+  vertical-align: top;
+
+  img {
+    display: block;
+    width: 100%;
+  }
+
+  &.double-wide {
+    width: 140%;
+    margin-left: -20%;
+
+    @media screen and (max-width: $break-medium) {
+      width: auto;
+      margin: 3em 0;
+    }
+  }
+
+// Side-by-side pics
+
+  &.two-up{
+    display: inline-block;
+    margin: 2em 0;
+    width: 68%;
+
+    &.left{
+        margin-left: -20%;
+
+        @media screen and (max-width: $break-medium) { 
+          margin-left: -10%; 
+          width: 58%;
+        }
+
+        @media screen and (max-width: $break-small) { 
+          margin-bottom: -1em;
+          margin-left: 0; 
+        }
+    }
+
+    &.right{
+        margin-right: -20%;
+
+        @media screen and (max-width: $break-medium) { 
+          margin-right: -10%; 
+          width: 58%;
+        }
+
+        @media screen and (max-width: $break-small) { margin-right: 0; }
+    }
+
+    &.left,
+    &.right {
+      @media screen and (max-width: $break-small) {
+        display: block;
+        float: none;
+        width: 100%;
+        margin: 2em 0;
+      }
+    }
+  }
+
+  &.natural-width {
+    img {
+      width: auto;
+      margin: 0 auto;
+    }
+  }
+} // figure
+
+figcaption {
+  color: $color-secondary;
+  font-family: $sans-serif;
+  font-size: $type-small;
+  line-height: 150%;
+  margin-top: 12px;
+
+  a:link,
+  a:visited { 
+    border-bottom: 1px solid $color-tertiary;
+    color: $color-secondary; 
+  }
+
+  a:hover, 
+  a:active { border-bottom: 1px solid $color-primary; }
+}
+

@@ -1,0 +1,295 @@
+/* === Primary nav (desktop) === */
+
+$timing-function: cubic-bezier(.4,0,.2,1);
+
+#nav {
+  font-family: $sans-serif;
+  margin: 0.5rem auto 4rem auto;
+
+  @media all and (max-width: $break-medium) { width: auto; }
+
+  @media all and (max-width: $break-small) {
+    border-bottom: 1px solid $light-grey;
+    padding-bottom: 20px;
+  }
+
+  @media all and (max-width: $break-tiny) {
+    background: white;
+    bottom: 0;
+    margin: 0;
+    position: fixed;
+    overflow-x: hidden;
+    overflow-y: auto;
+    top: 0;
+    transition: all $transition-fade;
+    transition-timing-function: $timing-function;
+    transform: translateX(-241px);
+    width: 180px;
+    z-index: 3;
+    -webkit-overflow-scrolling: touch;
+
+    &:after {
+      content: "";
+      background-image: url(/img/bd-logo.svg);
+      bottom: 32px;
+      display: block;
+      height: 42px;
+      left: 28px;
+      position: absolute;
+      width: 40px;
+    }
+
+    &.visible { 
+      margin-left: -20px;
+      transform: translateX(0); 
+    }
+  } // $break-tiny
+
+  .home {
+    border-bottom: none;
+    padding: 14px 0;
+    position: absolute;
+
+    @media all and (max-width: 860px) { 
+      display: inline-block; 
+      margin-right: 32px;
+      position: initial;
+    }
+
+    @media all and (max-width: $break-small) { 
+      display: block;
+      margin-right: 0;
+      padding: 14px 0 8px 0;
+      text-align: center;
+    }
+
+    @media all and (max-width: $break-tiny) { 
+      border-bottom: 2px solid $faint-grey;
+      display: block;
+      padding: 16px 32px;
+      margin: 0 0 12px 0;
+      text-align: left;
+    }
+
+    h1 { 
+      font-size: $type-normal;
+      font-weight: 500;
+      margin: 0; 
+
+      &:hover,
+      &:active { color: $color-accent; }
+    }
+  } // .home
+
+  ul.page-links {
+    flex-direction: row;
+    margin: 0 auto;
+    max-width: $container-width;
+    padding: 0;
+    vertical-align: top;
+
+    @media all and (max-width: 860px) { display: inline-block; }
+
+    @media all and (max-width: $break-small) { 
+      display: block; 
+      text-align: center;
+    } 
+
+    @media all and (max-width: $break-tiny) { text-align: left; }
+    
+    li { 
+      display: inline-block;
+      font-size: $type-small; 
+      font-weight: 500;
+      margin: 0;
+      padding: 0 16px;
+      text-transform: capitalize;
+
+      &:nth-child(1) { padding-left: 0; }
+
+      @media all and (max-width: $break-small) { padding: 0 9px; }
+
+      @media all and (max-width: $break-tiny) { 
+        display: block; 
+        padding: 0;
+      }
+
+      a {
+        &:link,
+        &:visited { 
+          border-bottom: none;
+          color: $color-tertiary; 
+          display: block;
+          padding: 16px 0 10px 0;
+          text-decoration: none;
+
+          @media all and (max-width: $break-small) { padding: 4px 0 12px 0; }
+
+          @media all and (max-width: $break-tiny) { 
+            font-size: 14px;
+            padding: 12px 32px; 
+          }
+        }
+
+        &:hover, 
+        &:active { color: $color-primary; }
+      }
+
+      &.active {
+        a { color: $color-primary; }
+      }
+    } // ul.page-links li
+  } // ul.page-links
+} // #nav
+
+
+/* === Primary nav (mobile) === */
+
+nav.narrow {
+  display: none;
+
+  @media all and (max-width: $break-tiny) { display: block }
+
+  #nav-reveal {
+    border-bottom: none;
+    display: none;
+    margin-left: -20px;
+    padding: 20px 16px 20px 20px;
+
+    @media all and (max-width: $break-tiny) { display: inline-block; }
+
+    div {
+      background-color: $color-tertiary;
+      height: 2px;
+      margin-bottom: 3px;
+      width: 16px;
+    }
+
+    &:hover div,
+    &:active div { background-color: $color-tertiary;}
+  }
+
+  .home {
+    border-bottom: none;
+    display: inline-block;
+    vertical-align: top;
+
+    h1 { 
+      font-size: 15px; 
+      font-weight: 500;
+      line-height: 100%;
+      margin: 19px 0;
+    }
+  }
+
+  .page-type {
+    color: $color-tertiary;
+    display: inline-block;
+    font-size: 15px;
+    line-height: 100%;
+    margin: 19px 26px;
+    vertical-align: top;
+
+    &::before { 
+      background-color: $color-tertiary;
+      content: ""; 
+      display: block;
+      height: 2px;
+      margin: 7px 0 0 -26px;
+      padding: 0 6px;
+      position: absolute;
+      width: 20px;
+    }
+  }
+}
+
+
+
+/* === Nav scrim (mobile) === */
+
+#nav-scrim {
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  background: rgba(0,0,0,.5);
+  left: 0;
+  top: 0;
+  opacity: .1;
+  visibility: hidden;
+  z-index: 2;
+  transition: all $transition-fade $timing-function;
+  transform: translateZ(0);
+
+  &.visible {
+    transition-delay: 0;
+    visibility: visible;
+    opacity: 1;
+  }
+}
+
+
+/* === Footer === */
+
+footer {
+  margin: 140px auto 70px auto;
+  // width: $container-width;
+
+  p {
+    color: $color-tertiary;
+    display: inline-block;
+    font-size: $type-small;
+
+    /* &:before {
+      content: "";
+      background-image: url(/img/bd-logo.svg);
+      bottom: 24px;
+      display: block;
+      height: 42px;
+      width: 40px;
+
+      @media all and (max-width: $break-small) { right: 20px; }
+
+      @media all and (max-width: $break-tiny) { display: none; }
+    } */
+  }
+
+  .social-links {
+    display: inline-block;
+    float: right;
+    margin-top: -10px;
+
+    li {
+      display: inline-block;
+
+      &.twitter a { background-image: url(/img/icon-twitter.svg) }
+
+      &.insta a { background-image: url(/img/icon-insta.svg) }
+
+      &.email a { background-image: url(/img/icon-email.svg) }
+
+      a {
+        background-position: 50% 50%;
+        background-repeat: no-repeat;
+        display: block;
+        height: 16px;
+        margin: 0 8px;
+        opacity: .4;
+        padding: 12px;
+        width: 20px;
+
+        &:link { border-bottom: none; }
+        &:hover { opacity: 1; }
+      }
+    }
+  } // .social-links
+
+  .return {
+    background-image: url(/img/bd-logo.svg);
+    border-bottom: none;
+    display: block;
+    margin: 0 auto;
+    height: 42px;
+    width: 40px;
+  }
+
+} // footer

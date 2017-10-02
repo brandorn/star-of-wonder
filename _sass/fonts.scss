@@ -1,0 +1,80 @@
+
+
+/* === Serif === */
+
+@font-face {
+  src: url(../src/fonts/Calluna-Regular.otf);
+  font-family: 'Calluna';
+  font-style: normal;
+  font-weight: normal;
+}
+
+@font-face {
+  src: url(../src/fonts/Calluna-Italic.otf);
+  font-family: 'Calluna';
+  font-style: italic;
+  font-weight: normal;
+} 
+
+@font-face {
+  src: url(../src/fonts/Calluna-Semibold.otf);
+  font-family: 'Calluna';
+  font-style: normal;
+  font-weight: 500;
+}
+
+@font-face {
+  src: url(../src/fonts/Calluna-Semibold-Italic.otf);
+  font-family: 'Calluna';
+  font-style: italic;
+  font-weight: 500;
+}
+
+@font-face {
+  src: url(../src/fonts/Calluna-Bold.otf);
+  font-family: 'Calluna';
+  font-style: normal;
+  font-weight: bold;
+}
+
+@font-face {
+  src: url(../src/fonts/Calluna-Bold-Italic.otf);
+  font-family: 'Calluna';
+  font-style: italic;
+  font-weight: bold;
+}
+
+
+$serif: "Calluna", Georgia, serif;
+.serif { font-family: $serif; }
+
+
+/* === Sans-serif === */
+
+/* @font-face {
+  src: local(SanFranciscoText),
+  url(../src/fonts/SanFranciscoText-Semibold.otf);
+  font-family: 'San Francisco Text';
+  font-style: normal;
+  font-weight: 700;
+} */
+
+$sans-serif: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+.sans-serif { font-family: $sans-serif; }
+
+
+/* Font sizes
+   ================================ */
+
+/* Get rid of "$type-normal" and others, replace across files */
+
+$type-largest: 2em;
+$type-large: 1.3em;
+$type-normal: 1.1em;
+$type-small: 0.85rem;
+
+.type-large { font-size: $type-large; }
+.type-normal { font-size: $type-normal; }
+.type-small { font-size: $type-small; }
+
+.italic { font-style: italic; }

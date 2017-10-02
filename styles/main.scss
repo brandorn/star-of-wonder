@@ -1,0 +1,51 @@
+---
+---
+@charset "UTF-8";
+
+
+/* Color variables
+   ================================ */
+
+$color-primary: rgba(63, 63, 63, 1);
+$color-secondary: rgba(63, 63, 63, 0.7);
+$color-tertiary: rgba(63, 63, 63, 0.5);
+$color-accent: #d8332a;
+
+.color-secondary { 
+  color: $color-secondary; 
+
+  a {
+    &:link,
+    &:visited,
+    &:hover,
+    &:active { color: $color-secondary; }
+  }
+}
+
+$grey: rgba(63, 63, 63, 0.5);
+$light-grey: rgba(63, 63, 63, 0.2);
+$faint-grey: rgba(63, 63, 63, 0.05);
+
+$transition-fade: 0.2s;
+
+
+/* Breakpoints
+   ================================ */
+
+$container-width: 540px;
+
+$break-large: 1000px;
+$break-medium: 960px;
+$break-small: 600px;
+$break-tiny: 400px;
+
+
+/* Sass partials (from _sass)
+   ================================ */
+
+@import
+  "fonts",
+  "base",
+  "nav",
+  "img"
+;

@@ -3,78 +3,123 @@
 /* === Serif === */
 
 @font-face {
-  src: url(../src/fonts/Calluna-Regular.otf);
-  font-family: 'Calluna';
+  src: url(../src/fonts/Vollkorn-Regular.otf);
+  font-family: 'Vollkorn';
   font-style: normal;
   font-weight: normal;
 }
 
 @font-face {
-  src: url(../src/fonts/Calluna-Italic.otf);
-  font-family: 'Calluna';
+  src: url(../src/fonts/Vollkorn-Italic.otf);
+  font-family: 'Vollkorn';
   font-style: italic;
   font-weight: normal;
 } 
 
 @font-face {
-  src: url(../src/fonts/Calluna-Semibold.otf);
-  font-family: 'Calluna';
+  src: url(../src/fonts/Vollkorn-Medium.otf);
+  font-family: 'Vollkorn';
   font-style: normal;
   font-weight: 500;
 }
 
 @font-face {
-  src: url(../src/fonts/Calluna-Semibold-Italic.otf);
-  font-family: 'Calluna';
+  src: url(../src/fonts/Vollkorn-Medium-Italic.otf);
+  font-family: 'Vollkorn';
   font-style: italic;
   font-weight: 500;
 }
 
 @font-face {
-  src: url(../src/fonts/Calluna-Bold.otf);
-  font-family: 'Calluna';
+  src: url(../src/fonts/Vollkorn-Bold.otf);
+  font-family: 'Vollkorn';
   font-style: normal;
   font-weight: bold;
 }
 
 @font-face {
-  src: url(../src/fonts/Calluna-Bold-Italic.otf);
-  font-family: 'Calluna';
+  src: url(../src/fonts/Vollkorn-Bold-Italic.otf);
+  font-family: 'Vollkorn';
   font-style: italic;
   font-weight: bold;
 }
 
-
-$serif: "Calluna", Georgia, serif;
+$serif: "Vollkorn", Georgia, serif;
 .serif { font-family: $serif; }
 
 
 /* === Sans-serif === */
 
-/* @font-face {
-  src: local(SanFranciscoText),
-  url(../src/fonts/SanFranciscoText-Semibold.otf);
-  font-family: 'San Francisco Text';
+@font-face {
+  src: url(../src/fonts/Clear-Sans-Regular.ttf);
+  font-family: 'Clear Sans';
   font-style: normal;
-  font-weight: 700;
-} */
+  font-weight: normal;
+}
 
-$sans-serif: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+@font-face {
+  src: url(../src/fonts/Clear-Sans-Italic.ttf);
+  font-family: 'Clear Sans';
+  font-style: italic;
+  font-weight: normal;
+} 
+
+@font-face {
+  src: url(../src/fonts/Clear-Sans-Medium.ttf);
+  font-family: 'Clear Sans';
+  font-style: normal;
+  font-weight: 500;
+}
+
+@font-face {
+  src: url(../src/fonts/Clear-Sans-Medium-Italic.ttf);
+  font-family: 'Clear Sans';
+  font-style: italic;
+  font-weight: 500;
+}
+
+@font-face {
+  src: url(../src/fonts/Clear-Sans-Bold.ttf);
+  font-family: 'Clear Sans';
+  font-style: normal;
+  font-weight: bold;
+}
+
+@font-face {
+  src: url(../src/fonts/Clear-Sans-Bold-Italic.ttf);
+  font-family: 'Vollkorn';
+  font-style: italic;
+  font-weight: bold;
+}
+
+$sans-serif: 'Clear Sans', Helvetica, Arial, sans-serif;
 .sans-serif { font-family: $sans-serif; }
+
+@font-face {
+  src: url(../src/fonts/Bungee-Shade.otf);
+  font-family: 'Bungee';
+  font-style: normal;
+  font-weight: normal;
+}
 
 
 /* Font sizes
    ================================ */
 
-/* Get rid of "$type-normal" and others, replace across files */
+/* These are guesses... */
 
-$type-largest: 2em;
-$type-large: 1.3em;
-$type-normal: 1.1em;
-$type-small: 0.85rem;
+$type-huge: 2.6em; // ~33px
+$type-larger: 2rem; // ~29px
+$type-large: 1.5em; // ~ 23px
+$type-medium-large: 1.4rem; // ~21px
+$type-medium: 1.1rem; // ~17px
+$type-normal: 1rem; // ~15px
+$type-smaller: 0.85rem; // ~13px
+$type-small: 0.8rem; // ~11px
 
 .type-large { font-size: $type-large; }
 .type-normal { font-size: $type-normal; }
 .type-small { font-size: $type-small; }
 
 .italic { font-style: italic; }
+.text-center { text-align: center; }

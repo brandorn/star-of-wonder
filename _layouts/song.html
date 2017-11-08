@@ -1,0 +1,59 @@
+---
+layout: default
+---
+
+{% assign album = page.album %} 
+{% assign album_list = site.categories.albums %}
+
+<h1>{{ page.title }}</h1>
+
+<p>Album: <a href="{% for albums in album_list %}
+											{% if albums.title == album %}
+												{{ albums.url }}
+											{% endif %}
+										{% endfor %}">{{ album }}</a></p>
+
+<p>Song #: {{ page.track_number }}</p>
+
+<p>Recording:</p>
+
+{{ content }}
+
+
+{% unless page.instrumental == true %}
+
+<p>Lyrics:</p>
+{% for songs in site.categories.songs %}
+{% if songs.album == page.album and songs.track_number == page.track_number and songs.type == 'lyrics' %}
+{{ songs.content }}
+{% endif %}
+{% endfor %}
+
+{% endunless %}
+
+
+<p>Notes:</p>
+
+{% for song_notes in site.categories.songs %}
+{% if song_notes.album == page.album and song_notes.track_number == page.track_number and song_notes.type == 'notes' %}
+{{ song_notes.content }}
+{% endif %}
+{% endfor %}
+
+
+<p>Other recordings:</p>
+
+{% for item in page.other_recordings %}
+  <li>{{ item }}</li>
+{% endfor %}
+
+
+
+<!-- Super jenk way to get the album URL... -->
+
+
+
+
+
+
+

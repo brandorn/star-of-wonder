@@ -5,6 +5,81 @@ title: Music
 description: This is the description
 ---
 
-# Music
 
-<a href="../">Home</a>
+
+<div class="grid">
+
+	<div class="section-intro grid__col--6-of-12 grid__col--centered grid__col">
+		<h1>Music</h1>
+
+		<p class="description">Vestibulum id ligula porta felis euismod semper. Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Nullam id dolor id nibh ultricies vehicula ut id elit. Cras justo odio, dapibus ac facilisis in, egestas eget quam.</p>
+
+		<ul class="page-links">
+			<li><a href="#albums-and-eps">Albums and EPs</a></li>
+			<li><a href="#collaborations">Collaborations</a></li>
+			<li><a href="#singles">Singles</a></li>
+		</ul>
+		
+	</div>
+	
+</div> <!-- grid -->
+
+<hr class="full">
+
+<h2 id="albums-and-eps">Albums and EPs</h2>
+
+<div class="grid music-albums">
+	{% assign album_list = site.categories.albums | sort:'year' %}
+	{% for albums in album_list %}
+	<div class="album grid__col--1-of-5 grid__col--m-1-of-2 grid__col">
+		<a href="{{ albums.url }}">
+			<div class="image">
+				<img src="../img/albums/{{ albums.cover }}">
+			</div>
+			<p class="title">{{ albums.title }}</p>
+			<p class="year">{{ albums.year }}</p>
+		</a>
+	</div>
+	{% endfor %}
+</div>
+
+<hr class="full">
+
+<h2 id="collaborations">Collaborations</h2>
+
+<div class="grid music-albums">
+	<div class="album collaboration grid__col--2-of-12 grid__col--m-1-of-3 grid__col">
+		<a href="#">
+			<img>
+			<p class="title">Illinois</p>
+			<p class="year">2008</p>
+		</a>
+	</div>
+	
+</div>
+
+<hr class="full">
+
+<h2 id="singles">Singles</h2>
+
+<div class="grid music-songs">
+	<div class="music-song has-image grid__col--6-of-12 grid__col--centered grid__col">
+		<a href="#">
+			<ul>
+				<li class="date">2016</li>
+				<li class="image">
+					<img>
+				</li>
+				<li class="title">Exploding Whale</li>
+			</ul>
+		</a>
+	</div>
+	<div class="music-song grid__col--6-of-12 grid__col--centered grid__col">
+		<a href="#">
+			<ul>
+				<li class="date">2016</li>
+				<li class="title">Exploding Whale</li>
+			</ul>
+		</a>
+	</div>
+</div>

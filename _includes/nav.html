@@ -1,6 +1,7 @@
 <nav id="nav">
-  <a href="../" class="home">
-    <h1>A Sufjan Companion</h1>
+  <a href="../" class="home-link">
+    <h1>Star of Wonder</h1>
+    <p>A closer look at the life and work of Sufjan Stevens.</p>
   </a>
 
   <ul class="page-links">
@@ -9,27 +10,23 @@
     {% else %} 
         <li><a href="../music/">music</a></li>
     {% endif %}
+    
     {% if page.active == "miscellanea" %}
         <li class="active"><a href="../miscellanea/">miscellanea</a></li>
     {% else %}
         <li><a href="../miscellanea/">miscellanea</a></li>
     {% endif %}
-    {% if page.active == "essays" %}
-        <li class="active"><a href="../essays/">essays</a></li>
-    {% else %}
-        <li><a href="../essays/">essays</a></li>
-    {% endif %}
+
     {% if page.active == "sufjan" %}
         <li class="active"><a href="../sufjan/">sufjan</a></li>
     {% else %}
         <li><a href="../sufjan/">sufjan</a></li>
     {% endif %}
-    {% if page.active == "about" %}
-        <li class="active"><a href="../about/">about</a></li>
+    
+    {% if page.active == "commentary" %}
+        <li class="active"><a href="../commentary/">commentary</a></li>
     {% else %}
-        <li><a href="../about/">about</a></li>
+        <li><a href="../commentary/">commentary</a></li>
     {% endif %}
   </ul>
 </nav>
-
-<div id="nav-scrim"></div>

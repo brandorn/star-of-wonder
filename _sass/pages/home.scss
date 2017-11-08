@@ -1,0 +1,90 @@
+.home h2 { font-size: $type-medium-large; }
+
+.home-intro-primary,
+.home-intro {
+
+	a { 
+
+		&.small {
+			font-size: $type-smaller; 
+
+			&:after {
+				content: "";
+	      background-image: url(/img/icon-arrow.svg);
+	      background-size: 100%;
+	      display: inline-block;
+	      height: 18px;
+	      margin: 0 0 4px 2px;
+	    	vertical-align: middle;
+	      width: 18px;
+			}
+
+			&:hover,
+			&:active {
+				&:after { background-image: url(/img/icon-arrow-hover.svg);}
+			} 
+		} // .small
+		
+	}
+}
+
+.home-intro { 
+	padding: 0.5rem 0;
+
+	.summary { margin-bottom: 3rem; }
+
+	// Might be able to do grid__col on images themselves instead of containing divs
+	.album img{
+		background: $faint-grey;
+		height: 200px;
+		width: 100%;
+	}
+
+	.button {
+		background-color: lighten($color-accent, 44%);
+		display: block;
+		border: 1px solid $color-accent;
+		padding: 1rem 0;
+		margin: 5rem 0 3rem 0;
+
+		&:link,
+		&:visited { 
+			color: $color-accent; 
+
+			&:after { background-image: url(/img/icon-arrow-hover.svg); }
+		}
+
+		&:hover,
+		&:active { 
+			border: 1px solid transparent;
+    	box-shadow: inset 0px 0px 0px 2px; 
+    }
+	}
+
+} // .home-intro
+
+.home-intro-primary {
+	li {
+		display: inline-block;
+
+		&:nth-child(1) { width: 36%; }
+
+		&:nth-child(2) {
+			padding-left: 30px; 
+			width: 62%; 
+
+			.intro-statement {
+				font-family: $serif;
+				font-size: 1.6rem;
+				line-height: 150%;
+
+				@media screen and (max-width: $break-medium) { font-size: 1.2rem; }
+			}
+		}
+
+		img { 
+			width: 100%;
+			// @media screen and (max-width: $break-medium) { width: 8rem; }
+		}
+	}
+}

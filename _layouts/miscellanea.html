@@ -1,0 +1,21 @@
+---
+layout: default
+---
+
+<p><a href="/miscellanea">Miscellanea</a></p>
+
+<h1>{{ page.title }}</h1>
+
+Content:
+
+{{ content }}
+
+
+Notes:
+
+{% for miscellanea_notes in site.categories.miscellanea %}
+{% if miscellanea_notes.title == page.title and miscellanea_notes.type == 'notes' %}
+{{ miscellanea_notes.content }}
+{% endif %}
+{% endfor %}
+

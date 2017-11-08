@@ -6,10 +6,10 @@
 /* Color variables
    ================================ */
 
-$color-primary: rgba(63, 63, 63, 1);
-$color-secondary: rgba(63, 63, 63, 0.7);
-$color-tertiary: rgba(63, 63, 63, 0.5);
-$color-accent: #d8332a;
+$color-primary: rgba(0, 0, 0, 1);
+$color-secondary: rgba(0, 0, 0, 0.6);
+$color-tertiary: rgba(0, 0, 0, 0.4);
+$color-accent: #7137dc;
 
 .color-secondary { 
   color: $color-secondary; 
@@ -22,30 +22,29 @@ $color-accent: #d8332a;
   }
 }
 
-$grey: rgba(63, 63, 63, 0.5);
-$light-grey: rgba(63, 63, 63, 0.2);
-$faint-grey: rgba(63, 63, 63, 0.05);
-
-$transition-fade: 0.2s;
+$grey: rgba(0,0,0, 0.3);
+$light-grey: rgba(0, 0, 0, 0.2);
+$faint-grey: rgba(0, 0, 0, 0.1);
 
 
 /* Breakpoints
    ================================ */
 
-$container-width: 540px;
+// Not yet sure how to reconcile these with grid.scss
 
-$break-large: 1000px;
-$break-medium: 960px;
+$break-large: 1300px;
+$break-medium: 800px;
 $break-small: 600px;
-$break-tiny: 400px;
-
 
 /* Sass partials (from _sass)
    ================================ */
 
 @import
+  "grid",
   "fonts",
   "base",
   "nav",
-  "img"
+  "img",
+  "pages/home",
+  "pages/indexes"
 ;

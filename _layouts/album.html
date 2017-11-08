@@ -1,0 +1,17 @@
+---
+layout: default
+---
+
+{% assign album_title = page.title %} 
+
+<h1>{{ album_title }}</h1>
+
+{% assign track_list = site.categories.songs | sort:'track_number' %}
+<ol>
+{% for songs in track_list %}
+{% if songs.album == album_title and songs.type == 'song' %}
+	<li> <a href="{{ songs.url }}"> <p class="title">{{ songs.title }}</p> </a> </li>
+{% endif %}
+{% endfor %}
+</ol>
+

@@ -1,37 +1,30 @@
 <head>
   <meta charset="utf-8">
-
-  <!-- Remove at some point -->
   <meta name="robots" content="noindex">
-
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="icon" type="image/ico" href="/img/favicon.png">
 
   <title>{% if page.title %}{{ page.title }}{% endif %} – {{ site.title }}</title>
   <meta name="description" content="Description of the project.">
-
   <link rel="stylesheet" href="{{ "/styles/normalize.css" | prepend: site.baseurl }}">
+  <link rel="stylesheet" href="{{ "/styles/slidebox.css" | prepend: site.baseurl }}">
   <link rel="stylesheet" href="{{ "/styles/main.css" | prepend: site.baseurl }}">
   <script src="/src/scripts/jquery-3.2.1.min.js" type="text/javascript"></script>
   <script src="/src/scripts/webui-popover.js" type="text/javascript"></script>
   <script src="/src/scripts/scripts.js" type="text/javascript"></script>
-
   {% if page.annotations %}
-    <link rel="stylesheet" href="{{ "/styles/webui-popover.css" | prepend: site.baseurl }}">
-    {% for js_file in page.annotations %}
-    <script src="/src/scripts/annotations/{{ js_file }}.js" type="text/javascript"></script>
-    {% endfor %}
+  <link rel="stylesheet" href="{{ "/styles/webui-popover.css" | prepend: site.baseurl }}">
+  {% for js_file in page.annotations %}
+  <script src="/src/scripts/annotations/{{ js_file }}.js" type="text/javascript"></script>
+  {% endfor %}
   {% endif %}
-
   {% if page.carousel %}
-    <link rel="stylesheet" href="{{ "/styles/slidebox.css" | prepend: site.baseurl }}">
-    <script src="/src/scripts/slidebox-min.js" type="text/javascript"></script>
-
-    <script type="text/javascript">
-      $(function () {
-        initSlides();
-      });
-    </script>
+  <script src="/src/scripts/slidebox-min.js" type="text/javascript"></script>
+  <script>
+    $(function () {
+      initSlides();
+    });
+  </script>
   {% endif %}
 
   <script>

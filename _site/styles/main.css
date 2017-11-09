@@ -983,3 +983,12 @@ figcaption {
     margin: 0;
     transition: all 200ms;
     width: 40px; }
+
+.slide-box img {
+  display: inline-block;
+  height: 200px;
+  width: 120px; }
+
+.box-zoomed .slide-prev,
+.box-zoomed .slide-next {
+  opacity: 0; }

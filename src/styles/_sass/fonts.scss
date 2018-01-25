@@ -114,7 +114,7 @@ $serif-alt: "Sorts Mill Goudy", Georgia, serif;
   font-weight: bold;
 }
 
-$sans-serif: 'Helvetica Neue', Helvetica, Roboto, Arial, sans-serif;
+$sans-serif: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Helvetica, Roboto, Arial, sans-serif;
 .sans-serif { font-family: $sans-serif; }
 
 @font-face {

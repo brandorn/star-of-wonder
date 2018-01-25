@@ -1,0 +1,199 @@
+
+html {
+  -webkit-text-size-adjust: 100%;
+  box-sizing: border-box;
+  font: 15px/1.5 $sans-serif;
+  text-rendering: optimizeLegibility;
+
+  @media screen and (min-width: $break-large) { font-size: 17px; }
+  @media screen and (max-width: $break-small) { font-size: 14px; }
+}
+
+body {
+  color: $color-primary;
+  font-variant-ligatures: normal;
+  line-height: 140%;
+  margin: 0 auto;
+  max-width: 1200px;
+  overflow: scroll;
+  padding: 0 2em;
+  position: relative;
+
+  @media screen and (max-width: $break-small) { padding: 0 1rem; }
+
+}
+
+section { margin: 0 auto; }
+
+h1 {
+  font-feature-settings: "liga", "dlig", "calt", "clig";
+  font-size: $type-large;
+  font-weight: normal;
+  line-height: 140%;
+  margin: 1.5rem 0;
+}
+
+h2 { 
+  font-size: $type-small;
+  font-weight: 600;
+  letter-spacing: 1px;
+  line-height: 100%;
+  margin: 4em 0 2em 0;
+  text-transform: uppercase;
+}
+
+h3 { 
+  color: $color-secondary;
+  font-size: $type-small;
+  font-weight: 600; 
+  margin: 4em 0 1em 0;
+}
+
+h4 { }
+
+p { 
+  font-size: $type-normal;
+  line-height: 170%; 
+  margin: .5rem 0 1.5rem 0;
+}
+
+a {
+  // Need to define these better globally, delete all border-bottom overrides
+  -webkit-tap-highlight-color: rgba(0,0,0,0);
+  text-decoration: none;
+  // transition: all 200ms;
+  
+  &:link,
+  &:visited { 
+    color: $color-primary; 
+  }
+
+  &:hover,
+  &:active {  }
+
+}
+
+blockquote {
+  margin: 2rem;
+
+  p { 
+    font-family: $serif;
+    font-size: $type-medium;
+    margin-bottom: 1rem; 
+  }
+
+  &.lyrics {
+    font-style: italic;
+  }
+
+  &.big {
+    margin-top: 3rem;
+
+    p { 
+      font-size: $type-medium-large;
+      font-weight: bold;
+    }
+  }
+
+  cite {
+    color: $color-secondary;
+    display: block;
+    font-size: $type-normal;
+    font-style: normal;
+    font-family: $sans-serif;
+    margin-left: 2rem;
+
+    &:before { 
+      background-color: $color-secondary;
+      content: ""; 
+      display: inline-block;
+      height: 1px;
+      margin: -2px 4px 0 0;
+      vertical-align: middle;
+      width: 16px;
+    }
+  }
+
+  @media screen and (max-width: $break-medium) { 
+    margin: 24px 12px; 
+    width: auto;
+  }
+} // blockquote
+
+sup {
+  color: $grey;
+  font-family: $sans-serif;
+  font-size: 10px;
+  font-weight: bold;
+  left: -1px;
+  padding-right: 2px;
+  top: -6px;
+
+  a:link,
+  a:visited,
+  .footnotes .returnUp:link,
+  .footnotes .returnUp:visited {
+    text-decoration: none;
+    border-bottom: none;
+  }
+} // sup
+
+ol, ul {
+  &.boxed {
+    background-color: $faint-grey;
+    padding: 20px 40px;
+  }
+}
+
+ul {
+  display: block;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+
+  li { list-style: disc; }
+}
+
+ol {
+  display: block;
+  margin: 1em 0;
+  margin-left: 0;
+  padding-left: 0;
+}
+
+li {
+  line-height: 160%;
+  margin: 1em 0;
+  vertical-align: top;
+}
+
+hr {
+  height: 1px;
+  background: $faint-grey;
+  border: none;
+  margin: 3rem auto;
+}
+
+table { margin: 2em 0; }
+
+td,
+th {
+  padding: 0.5em;
+  text-align: left;
+  vertical-align: top;
+}
+
+thead th {
+  font-size: $type-normal;
+}
+
+i { 
+  font-style: italic; 
+  font-weight: normal;
+}
+
+strong {font-weight: bold; }
+
+*::selection { }
+
+*:focus { outline: 1px dotted $color-secondary; }

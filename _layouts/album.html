@@ -4,14 +4,84 @@ layout: default
 
 {% assign album_title = page.title %} 
 
-<h1>{{ album_title }}</h1>
+<div class="album-container overview">
 
-{% assign track_list = site.categories.songs | sort:'track_number' %}
-<ol>
-{% for songs in track_list %}
-{% if songs.album == album_title and songs.type == 'song' %}
-	<li> <a href="{{ songs.url }}"> <p class="title">{{ songs.title }}</p> </a> </li>
-{% endif %}
-{% endfor %}
-</ol>
+	<p class="type"><a href="/music">{{ page.type }}</a></p>
+
+	<h1>{{ album_title }}</h1>
+
+	<table class="album-details">
+		<tbody>
+			<tr>
+				<td>Released</td>
+				<td>{{ page.date | date: '%B %-d, %Y' }}</td>
+			</tr>
+			<tr>
+				<td>Label</td>
+				<td>{{ page.label }}</td>
+			</tr>
+			<tr>
+				<td>Location</td>
+				<td>{{ page.location }}</td>
+			</tr>
+			<tr>
+				<td>Artists</td>
+				<td>{{ page.artists }}</td>
+			</tr>
+			<tr>
+				<td>Produced by</td>
+				<td>{{ page.producer }}</td>
+			</tr>
+		</tbody>
+	</table>
+
+	<div class="lightbox-1 album-art">
+
+		{% for images in page.images %}
+		{% assign image_number = forloop.length %}
+		<a href="../img/music/{{ images.image }}" class="{% if images.image contains "cover" %} cover {% else %} secondary {% endif %}" title="{{ images.title }} <span class='image-count'>{{ forloop.index }} of {{ forloop.length }}</span>">
+			<img src="../img/music/{{ images.image }}"/>
+		</a>
+		{% endfor %}
+
+		<p>⇧ Click to zoom</p>
+	</div> <!-- .album-art -->
+
+</div> <!-- .album-container -->
+
+	
+
+<div class="album-container tracks">
+	<h2>Tracks</h2>
+	{% assign track_list = site.categories.songs | sort:'track_number' %}
+	<ol class="track-list">
+	{% for item in track_list %}
+	{% if item.album == album_title %}
+	{% unless item.url contains "notes" %}
+		<li> <p class="title">{% if item.original_version_url %}<a href="{{ site.baseurl }}/music/{{ item.original_version_url }}">{{ item.title }} <span class="remix-label">Remix of {{ item.original_version_title }}</span></a> {% else %} <a href="{{ item.url }}">{{ item.title }}</a>{% endif %}</p> </li>
+	{% endunless %}
+	{% endif %}
+	{% endfor %}
+	</ol>
+
+	<div class="secondary-content">
+		<h2>Notes</h2>
+
+		{% for item in site.categories.albums %}
+		{% if item.album == page.title and item.notes %}
+		{{ item.content }}
+		{% endif %}
+		{% endfor %}
+	</div>
+
+	<!-- Small album grid -->
+
+	
+</div> <!-- .album-container -->
+
+
+
+
+
+
 

@@ -1,0 +1,64 @@
+---
+---
+@charset "UTF-8";
+
+
+/* Color variables
+   ================================ */
+
+$color-primary: rgba(0, 0, 0, 1);
+$color-secondary: rgba(0, 0, 0, 0.6);
+$color-tertiary: rgba(0, 0, 0, 0.4);
+$color-accent: #bb6cf1;
+
+.color-secondary { 
+  color: $color-secondary; 
+
+  a {
+    &:link,
+    &:visited,
+    &:hover,
+    &:active { color: $color-secondary; }
+  }
+}
+
+$grey: rgba(0,0,0, 0.3);
+$light-grey: rgba(0, 0, 0, 0.2);
+$faint-grey: rgba(0, 0, 0, 0.1);
+
+
+/* Containers
+   ================================ */
+$text-width: 550px;
+$text-width-wider: 600px;
+
+.text-width {
+  margin: 0 auto;
+  max-width: $text-width;
+}
+
+
+/* Breakpoints
+   ================================ */
+
+// Not yet sure how to reconcile these with grid.scss
+
+$break-large: 1300px;
+$break-medium: 900px; 
+$break-small: 600px;
+$break-tiny: 400px;
+
+/* Sass partials (from _sass)
+   ================================ */
+
+@import
+  "fonts",
+  "base",
+  "nav",
+  "img",
+  "features",
+  "pages/home",
+  "pages/indexes",
+  "pages/albums-and-songs",
+  "pages/miscellanea-and-commentary"
+;

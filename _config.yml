@@ -1,10 +1,12 @@
 # General
-title: A Sufjan Companion
-description: [ Sufjan Companion description]
+title: Star of Wonder
+description: [ SoW description]
 url: "http://sufjan.info"
+permalink: /:categories/:title
 
 # Build settings
 markdown: kramdown
 
-# Other
-permalink: /:categories/:title
+# Sass directory
+sass:
+  sass_dir: /src/styles/_sass

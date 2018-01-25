@@ -1,85 +1,82 @@
 ---
 layout: default
-active: music
 title: Music
 description: This is the description
 ---
 
+<div class="index-intro">
+	<h1>Music</h1>
 
+	<ul class="page-links">
+		<li><a href="#albums">Albums</a></li>
+		<li><a href="#collaborations">Collaborations</a></li>
+		<li><a href="#singles">Singles</a></li>
+	</ul>
 
-<div class="grid">
-
-	<div class="section-intro grid__col--6-of-12 grid__col--centered grid__col">
-		<h1>Music</h1>
-
-		<p class="description">Vestibulum id ligula porta felis euismod semper. Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Nullam id dolor id nibh ultricies vehicula ut id elit. Cras justo odio, dapibus ac facilisis in, egestas eget quam.</p>
-
-		<ul class="page-links">
-			<li><a href="#albums-and-eps">Albums and EPs</a></li>
-			<li><a href="#collaborations">Collaborations</a></li>
-			<li><a href="#singles">Singles</a></li>
-		</ul>
-		
-	</div>
+	<p class="section-description">Vestibulum id ligula porta felis euismod semper. Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Nullam id dolor id nibh ultricies vehicula ut id elit. Cras justo odio, dapibus ac facilisis in, egestas eget quam.</p>
 	
-</div> <!-- grid -->
+</div>
 
-<hr class="full">
-
-<h2 id="albums-and-eps">Albums and EPs</h2>
-
-<div class="grid music-albums">
-	{% assign album_list = site.categories.albums | sort:'year' %}
-	{% for albums in album_list %}
-	<div class="album grid__col--1-of-5 grid__col--m-1-of-2 grid__col">
-		<a href="{{ albums.url }}">
+<div id="albums" class="album-grid primary">
+	{% assign album_list = site.categories.music %}
+	{% for item in album_list %}
+	{% if item.type == 'album' %}
+	<div class="album">
+		<a href="{{ item.url }}">
 			<div class="image">
-				<img src="../img/albums/{{ albums.cover }}">
+				{% for images in item.images %}
+				{% if images.image contains "cover" %}
+					<img class="cover" src="../img/music/{{ images.image }}" title="">
+				{% endif %}
+				{% endfor %}
 			</div>
-			<p class="title">{{ albums.title }}</p>
-			<p class="year">{{ albums.year }}</p>
+			<p class="title">{{ item.title }}</p>
+			<p class="type">{{ item.date | date: '%Y' }}</p>
 		</a>
 	</div>
+	{% endif %}
 	{% endfor %}
 </div>
 
-<hr class="full">
 
-<h2 id="collaborations">Collaborations</h2>
+<h2 id="collaborations" class="type-centered">Collaborations</h2>
 
-<div class="grid music-albums">
-	<div class="album collaboration grid__col--2-of-12 grid__col--m-1-of-3 grid__col">
-		<a href="#">
-			<img>
-			<p class="title">Illinois</p>
-			<p class="year">2008</p>
+<div class="album-grid secondary">
+	{% for item in album_list %}
+	{% if item.type == 'other' %}
+	<div class="album">
+		<a href="{{ item.url }}">
+			<div class="image">
+				{% for images in item.images %}
+				{% if images.image contains "cover" %}
+					<img class="cover" src="../img/music/{{ images.image }}" title="">
+				{% endif %}
+				{% endfor %}
+			</div>
+			<p class="title">{{ item.title }}</p>
+			<p class="type">{{ item.sub_type }}</p>
 		</a>
 	</div>
+	{% endif %}
+	{% endfor %}
 	
 </div>
 
-<hr class="full">
+<h2 id="singles" class="type-centered">Singles</h2>
 
-<h2 id="singles">Singles</h2>
-
-<div class="grid music-songs">
-	<div class="music-song has-image grid__col--6-of-12 grid__col--centered grid__col">
-		<a href="#">
-			<ul>
-				<li class="date">2016</li>
-				<li class="image">
-					<img>
-				</li>
-				<li class="title">Exploding Whale</li>
-			</ul>
+<ul class="singles-list">
+	{% assign song_list = site.categories.songs %}
+	{% for item in song_list %}
+	{% if item.single %}
+	<li>
+		<a href="{{ item.url }}">
+			{% if item.thumb %}
+			<img src="../img/music/{{ item.thumb }}">
+			{% endif %}
+			<p class="title">{{ item.title }}</p>
+			<p class="type">{{ item.date | date: '%Y' }}</p>
 		</a>
-	</div>
-	<div class="music-song grid__col--6-of-12 grid__col--centered grid__col">
-		<a href="#">
-			<ul>
-				<li class="date">2016</li>
-				<li class="title">Exploding Whale</li>
-			</ul>
-		</a>
-	</div>
-</div>
+	</li>
+	{% endif %}
+	{% endfor %}
+</ul>

@@ -3,57 +3,121 @@ layout: default
 ---
 
 {% assign album = page.album %} 
-{% assign album_list = site.categories.albums %}
+{% assign album_list = site.categories.music %}
 
-<h1>{{ page.title }}</h1>
+{% for item in album_list %}
+	{% if item.title == album %}
+		{% assign album_url = item.url %}
+		{% assign album_track_count = item.track_count %}
 
-<p>Album: <a href="{% for albums in album_list %}
-											{% if albums.title == album %}
-												{{ albums.url }}
-											{% endif %}
-										{% endfor %}">{{ album }}</a></p>
+		{% for image_item in item.images %}
+			{% if image_item.image contains "cover" %}
+				{% assign album_cover = image_item.image %}
+			{% endif %}
+		{% endfor %}
 
-<p>Song #: {{ page.track_number }}</p>
-
-<p>Recording:</p>
-
-{{ content }}
-
-
-{% unless page.instrumental == true %}
-
-<p>Lyrics:</p>
-{% for songs in site.categories.songs %}
-{% if songs.album == page.album and songs.track_number == page.track_number and songs.type == 'lyrics' %}
-{{ songs.content }}
-{% endif %}
+	{% endif %}
 {% endfor %}
 
-{% endunless %}
+<div class="song-container">
+
+	<div class="song-overview">
+
+		<div class="song-artwork">
+			<img src="{{ site.baseurl }}/img/music/{{ album_cover }}" alt="Cover of {{ album }}">
+		</div>
+
+		<div class="song-info">
+			<p class="type"><a href="/music">Music</a> <span class="divider">/</span> <a href="{{ album_url }}">{{ album }}</a> </p>
+			<h1>{{ page.title }}</h1>
+			<p class= "song-meta">Track {{ page.track_number }} of {{ album_track_count }} on <a class= "album" href="{{ album_url }}">{{ album }}</a></p>
+			<p class= "song-meta artists">Artist{% if page.artists contains "," %}<span>s</span>{% endif %}: {{ page.artists }}</p>
+		</div>
+
+	</div> <!-- .song-overview -->
+</div> <!-- .song-container -->
+
+<div class="song-container">
+
+	{% if page.instrumental %}
+	<div class="recording-instrumental">
+		<div> {{ page.primary_recording }} </div>
+	</div>
+	<p class="instrumental-label">Instrumental</p>
+	{% else %}
+	<div class="song-content">
+		<div class="recording-primary">
+			<div> {{ page.primary_recording }} </div>
+		</div>
+		<div class="lyrics"> {{ content }} </div>
+	</div> <!-- .song-content-->
+	{% endif %}
+	
+	{% for item in site.categories.songs %}
+	{% if item.album == page.album and item.track_number == page.track_number and item.url contains "notes" %}
+	<div class="song-analysis">
+	<h2>Notes</h2>
+	{{ item.content }}
+	</div> <!-- .song-analysis -->
+	{% endif %}
+	{% endfor %}
+
+	{% if page.other_recordings %}
+	<div class="song-analysis">
+	<h2>Remixes and Other Recordings</h2>
+	{% for item in page.other_recordings %}
+	<div class="other-recordings">
+		<iframe width="480" height="270" src="{{ item.source }}" frameborder="0" gesture="media" allow="encrypted-media" allowfullscreen></iframe>
+	</div>
+	<p class="description">{{ item.description }}</p>
+	{% endfor %}
+	</div> <!-- .song-analysis -->
+	{% endif %}
 
 
-<p>Notes:</p>
+	<!-- Make into simpler <ol> -->
+	<div class="album-track-list">
+		<div class="album-cover">
+			<img src="{{ site.baseurl }}/img/music/{{ album_cover }}" alt="Cover of {{ album }}">
+		</div>
+		<div class="album-tracks">
+		<h2 class="album-title">{{ page.album }}</h2>
+		{% assign track_list = site.categories.songs | sort:'track_number' %}
+		<ol class="track-list">
+		{% for item in track_list %}
+		{% if item.album == album %}
+			{% if item.title == page.title %} 
+				<li class="this-track"> <p class="title">{{ item.title }}</p> </li>
+			{% else %}
+				<li> <p class="title"><a href="{{ item.url }}"> {{ item.title }}</a></p> </li>
+			{% endif %}
+		{% endif %}
+		{% endfor %}
+		</ol>
+		</div>
+	</div> <!-- album-track-list -->
 
-{% for song_notes in site.categories.songs %}
-{% if song_notes.album == page.album and song_notes.track_number == page.track_number and song_notes.type == 'notes' %}
-{{ song_notes.content }}
-{% endif %}
-{% endfor %}
+	<div class="album-grid song">
+		{% assign album_list = site.categories.music %}
+		{% for item in album_list %}
+		{% unless item.title == album %}
+		{% if item.type == 'album' or item.type == 'other' %}
+		<div class="album">
+			{% for image_item in item.images %}
+			{% if image_item.image contains "cover" %}
+			<a href="{{ albums.url }}">
+				<div class="image">
+					<img src="{{ site.baseurl }}/img/music/{{ image_item.image }}">
+				</div>
+			</a>
+			{% endif %}
+			{% endfor %}
+		</div>
+		{% endif %}
+		{% endunless %}
+		{% endfor %}
+	</div>
 
-
-<p>Other recordings:</p>
-
-{% for item in page.other_recordings %}
-  <li>{{ item }}</li>
-{% endfor %}
-
-
-
-<!-- Super jenk way to get the album URL... -->
-
-
-
-
-
+</div> <!-- .song-container -->
 
 

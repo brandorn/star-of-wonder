@@ -1,19 +1,31 @@
 ---
 layout: default
-active: commentary
 title: Commentary
 description: This is the description
 ---
 
-<div class="grid">
+<div class="index-intro">
+	<h1>Commentary</h1>
 
-	<div class="section-intro grid__col--6-of-12 grid__col--centered grid__col">
-		<h1>Commentary</h1>
+	<p class="section-description">Cras mattis consectetur purus sit amet fermentum. Sed posuere consectetur est at lobortis. Maecenas sed diam eget risus varius blandit sit amet non magna. Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Maecenas faucibus mollis interdum.</p>
 
-		<p class="description">Cras mattis consectetur purus sit amet fermentum. Sed posuere consectetur est at lobortis. Maecenas sed diam eget risus varius blandit sit amet non magna. Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Maecenas faucibus mollis interdum.</p>
+</div>
 
-	</div>
-	
-</div> <!-- grid -->
-
-<hr class="full">
+<ul class="commentary-index-list">
+	{% assign commentary_list = site.categories.commentary | sort:'year' %}
+	{% for essay in commentary_list %}
+	<li>
+		<a href="{{ essay.url }}" title="">
+			<div class="commentary-item">
+				<div class="commentary-intro">
+					<p class="title">{{ essay.title }}</p>
+					<p class="lede">{{ essay.lede }}</p>
+					<p class="author"> <span>By</span> {{ essay.author }}</p>
+					<span class="date">{{ essay.date | date: '%-d %B %Y' }}</p>
+				</div>
+				<div class="image"> <img src="/img/commentary/{{ essay.thumb }}" alt=""> </div>
+			</div>
+		</a>
+	</li>
+	{% endfor %}
+</ul>

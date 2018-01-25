@@ -1,0 +1,294 @@
+
+
+.miscellanea,
+.commentary { 
+
+	.description {
+		color: $color-secondary;
+		font-family: $serif;
+		font-size: $type-medium;
+		font-style: italic;
+		margin: 2rem auto 4rem auto;
+		max-width: 560px;
+	} // .description 
+
+	.intro-image {
+		margin: 3rem auto 5rem auto;
+		max-width: 800px;
+
+		img { width: 100%;}
+
+		cite { 
+			color: $color-secondary;
+			display: block;
+			font-size: $type-smaller;
+			font-style: normal;
+			margin: 1rem auto;
+			text-align: center;
+		}
+	} // .intro-image
+
+	.story-content,
+	.commentary-content {
+		> p { 
+			font-family: $serif;
+			font-size: 1.3rem;
+		}
+	}
+} 
+
+
+/* Miscellanea
+   ================================ */
+
+
+.miscellanea-overview {
+	text-align: center;
+	margin: 0 auto 2rem auto;
+	max-width: 740px;
+
+	.type { 
+		font-size: $type-small;
+		font-weight: 500;
+		letter-spacing: 1px;
+		text-transform: uppercase;
+
+		a {
+			&:link,
+			&:visited { 
+				border-bottom: none; 
+				color: $color-tertiary;
+			}
+			&:hover,
+			&:active { 
+				border-bottom: none; 
+				color: $color-primary;
+			}
+		}
+	} // .type
+
+	h1.title-other {
+		font-family: $serif-alt;
+		font-size: 2.4rem;
+		font-style: italic;
+		line-height: 120%;
+		margin: 2rem auto -1rem auto;
+		max-width: $text-width-wider;
+	}
+
+	h1.title-writing {
+		font-family: $serif-alt;
+		font-size: 4.6rem;
+		line-height: 120%;
+		margin: 3rem auto 1rem auto;
+		max-width: 900px;
+
+		@media all and (max-width: $break-medium) { 
+			font-size: 3rem; 
+			max-width: 500px;
+		}
+	}
+
+	.attribution {
+		font-size: $type-smaller;
+		margin: 2rem 0;
+
+		.author { 
+			letter-spacing: 1px;
+			margin-left: 0.3rem;
+			text-transform: uppercase;
+
+			&:after {
+				color: $color-tertiary;
+				content: "•";
+				margin: 0 0.5rem 0 1rem;
+    		font-size: 0.7rem;
+    		vertical-align: top;
+			}
+		}
+
+		.date { color: $color-tertiary; }
+	} // .attribution
+
+	.description {
+		color: $color-secondary;
+		font-family: $serif;
+		font-size: $type-medium;
+		font-style: italic;
+		margin: 2rem auto 4rem auto;
+		max-width: 560px;
+	} // .description 
+} // .miscellanea-overview
+
+
+.miscellanea-notes,
+.story-content {
+	margin: 0 auto;
+	max-width: $text-width-wider;
+}
+
+.story-content {
+	p { 
+		.uppercase { 
+			font-size: 1.2rem;
+			letter-spacing: 0.7px;
+			text-transform: uppercase;
+		}
+
+		// Drop cap
+		&:first-of-type:first-letter {
+		  float: left;
+		  font-family: $serif-alt;
+		  font-size: 4.5rem;
+  		line-height: 80%;
+		  padding-right: 0.5rem;
+		  padding-top: 10px;
+		}
+	} // p
+
+	hr {
+		height: 11px;
+		background-color: transparent;
+		background-image: url('/img/icons/star.png');
+		background-size: 100%;
+		width: 12px;
+	}
+} //.story-content
+
+.other-content {
+	margin: 0 auto;
+	max-width: 854px;
+
+	.miscellanea-video {
+		margin: 2rem auto;
+		position: relative;
+		padding-bottom: 56.25%; /* 16:9 */
+		padding-top: 25px;
+		height: 0;
+
+		iframe {
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+		}
+	} // .miscellanea-video
+
+} //.other-content
+
+.miscellanea-notes {
+	border-top: 1px solid $faint-grey;
+	margin-top: 6rem;
+	padding-top: 1rem;
+
+	&.other { 
+		border-top: none; 
+		margin-top: 3rem;
+	}
+}
+
+/* Commentary Page
+   ================================ */
+
+.commentary-container {
+	margin: 0 auto;
+	max-width: 600px;
+
+	h1 { 
+		font-family: $serif-alt;
+		font-size: 4.4rem;
+		// font-weight: bold;
+		line-height: 110%;
+	}
+
+	.attribution {
+		border-bottom: 1px solid $color-primary;
+		padding-bottom: 0.5rem;
+		// left: 1rem;
+		// position: absolute;
+
+		@media	all and (max-width: $break-medium) { position: inherit; }
+
+		p { 
+			display: inline-block;
+			margin: 0.5rem 0;
+		}
+
+		.author { 
+			font-weight: 600;
+			span { font-weight: normal; } 
+		}
+
+		.date { 
+			font-size: $type-smaller; 
+			float: right;
+			margin-top: 0.8rem;
+		}
+
+		.type {
+			font-size: $type-small;
+			font-weight: 600;
+			letter-spacing: 1px;
+			margin-top: 1.5rem;
+			text-transform: uppercase;
+
+			a:link,
+			a:visited { color: $color-secondary; }
+
+			a:hover,
+			a:active { color: $color-accent; }
+		}
+
+	} // .attribution
+
+	.description { 
+		margin-bottom: 1rem;
+		max-width: 600px;
+	}
+
+} // .commentary-container
+
+
+/* Suf Bio
+   ================================ */
+
+.suf-bio {
+
+	h2 {
+		font-size: $type-large;
+		font-weight: normal;
+		letter-spacing: 0;
+		margin-bottom: 1rem;
+		text-align: center;
+		text-transform: capitalize;
+	}
+
+	.years {
+		color: $color-secondary;
+		margin: 0 0 3rem 0;
+		text-align: center;
+	}
+
+	p {
+		font-family: $serif;
+		font-size: $type-medium;
+	}
+} // .suf-bio
+
+/* About
+   ================================ */
+
+.about-intro {
+	font-family: $sans-serif;
+	font-size: $type-larger;
+	line-height: 140%;
+	margin: 5rem auto 3rem auto;
+}
+
+.about-text {
+	p {
+		font-family: $serif;
+		font-size: $type-medium;
+	}
+}

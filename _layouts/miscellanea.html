@@ -2,20 +2,58 @@
 layout: default
 ---
 
-<p><a href="/miscellanea">Miscellanea</a></p>
+<div class="miscellanea-overview">
+	<p class="type"><a href="/miscellanea">{{ page.genre }}</a></p>
+	{% if page.type == 'other' %}
+	<h1 class="title-other">{{ page.title }}</h1>
+	{% else %}
+	<h1 class="title-writing">{{ page.title }}</h1>
+	{% endif %}
+	<p class="attribution"><i>by</i> <span class="author">{{ page.artists }}</span> <span class="date">{{ page.date | date: '%B %Y' }}</span></p>
+	<p class="description"> {{ page.description }}</p>
+</div>
 
-<h1>{{ page.title }}</h1>
+{% if page.intro_image %}
+<figure class="intro-image">
+	{% for item in page.intro_image %}
+	<img src="{{ site.baseurl }}/img/miscellanea/{{ item.image }}" alt="">
+	<cite> {{ item.caption }} </cite>
+	{% endfor %}
+</figure>
+{% endif %}
 
-Content:
-
+{% if page.type == 'writing' %}
+<div class="story-content">
 {{ content }}
+</div>
+{% endif %}
 
-
-Notes:
-
-{% for miscellanea_notes in site.categories.miscellanea %}
-{% if miscellanea_notes.title == page.title and miscellanea_notes.type == 'notes' %}
-{{ miscellanea_notes.content }}
+{% if page.type == 'other' %}
+<div class="other-content">
+{% for item in page.source %}
+{% if item.type == 'video' %}
+	<div class="miscellanea-video">
+		<iframe width="854" height="480" src="{{ item.thing }}" frameborder="0" gesture="media" allow="encrypted-media" allowfullscreen></iframe>
+	</div>
 {% endif %}
 {% endfor %}
+</div>
+{% endif %}
+
+<div class="miscellanea-notes {% if page.type == 'score'%}other{% endif %}">
+{% for item in site.categories.miscellanea %}
+{% if item.title == page.title and item.url contains 'notes' %}
+<h2>Notes</h2>
+{{ item.content }}
+{% endif %}
+{% endfor %}
+
+{% for item in site.categories.music %}
+{% if item.title == page.title and item.url contains 'notes' %}
+<h2>Notes</h2>
+{{ item.content }}
+{% endif %}
+{% endfor %}
+</div>
+
 

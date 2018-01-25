@@ -5,28 +5,9 @@
   </a>
 
   <ul class="page-links">
-    {% if page.active == "music" %}
-        <li class="active"><a href="../music/">music</a></li>
-    {% else %} 
-        <li><a href="../music/">music</a></li>
-    {% endif %}
-    
-    {% if page.active == "miscellanea" %}
-        <li class="active"><a href="../miscellanea/">miscellanea</a></li>
-    {% else %}
-        <li><a href="../miscellanea/">miscellanea</a></li>
-    {% endif %}
-
-    {% if page.active == "sufjan" %}
-        <li class="active"><a href="../sufjan/">sufjan</a></li>
-    {% else %}
-        <li><a href="../sufjan/">sufjan</a></li>
-    {% endif %}
-    
-    {% if page.active == "commentary" %}
-        <li class="active"><a href="../commentary/">commentary</a></li>
-    {% else %}
-        <li><a href="../commentary/">commentary</a></li>
-    {% endif %}
+    <li {% if page.title == "Music" or page.category == "music" or page.category == "songs" or page.category == "singles"%} class="active" {% endif %}><a href="/music/">music</a></li>
+    <li {% if page.title == "Miscellanea" or page.category == "miscellanea" %} class="active" {% endif %}><a href="/miscellanea/">miscellanea</a></li>
+    <li {% if page.title == "Sufjan" %} class="active" {% endif %}><a href="/sufjan/">sufjan</a></li>
+    <li {% if page.title == 'Commentary' or page.category == 'commentary' %} class="active" {% endif %}><a href="/commentary/">commentary</a></li>
   </ul>
 </nav>

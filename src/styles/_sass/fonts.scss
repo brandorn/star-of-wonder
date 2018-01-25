@@ -1,0 +1,158 @@
+
+
+/* === Serif === */
+
+@font-face {
+  src: url(../../src/fonts/Calluna-Regular.otf);
+  font-family: 'Calluna';
+  font-style: normal;
+  font-weight: normal;
+}
+
+@font-face {
+  src: url(../../src/fonts/Calluna-Italic.otf);
+  font-family: 'Calluna';
+  font-style: italic;
+  font-weight: normal;
+} 
+
+@font-face {
+  src: url(../../src/fonts/Calluna-Semibold.otf);
+  font-family: 'Calluna';
+  font-style: normal;
+  font-weight: 500;
+}
+
+@font-face {
+  src: url(../../src/fonts/Calluna-Semibold-Italic.otf);
+  font-family: 'Calluna';
+  font-style: italic;
+  font-weight: 500;
+}
+
+@font-face {
+  src: url(../../src/fonts/Calluna-Bold.otf);
+  font-family: 'Calluna';
+  font-style: normal;
+  font-weight: bold;
+}
+
+@font-face {
+  src: url(../../src/fonts/Calluna-Bold-Italic.otf);
+  font-family: 'Calluna';
+  font-style: italic;
+  font-weight: bold;
+}
+
+// $serif: 'Calluna', Georgia, serif;
+$serif: 'Calluna', Georgia, serif;
+.serif { font-family: $serif; }
+
+
+/* === Serif Alt === */
+
+@font-face {
+  src: url(../../src/fonts/GoudyStM.otf);
+  font-family: 'Sorts Mill Goudy';
+  font-style: normal;
+  font-weight: normal;
+}
+
+@font-face {
+  src: url(../../src/fonts/GoudyStM-Italic.otf);
+  font-family: 'Sorts Mill Goudy';
+  font-style: italic;
+  font-weight: normal;
+}
+
+
+$serif-alt: "Sorts Mill Goudy", Georgia, serif;
+.serif-alt { font-family: $serif-alt; }
+
+
+/* === Sans-serif === */
+
+@font-face {
+  src: url(../../src/fonts/HelveticaNeue-Regular.ttf);
+  font-family: 'Helvetica Neue';
+  font-style: normal;
+  font-weight: normal;
+}
+
+@font-face {
+  src: url(../../src/fonts/HelveticaNeue-Italic.ttf);
+  font-family: 'Helvetica Neue';
+  font-style: italic;
+  font-weight: normal;
+} 
+
+@font-face {
+  src: url(../../src/fonts/HelveticaNeue-Medium.ttf);
+  font-family: 'Helvetica Neue';
+  font-style: normal;
+  font-weight: 500;
+}
+
+@font-face {
+  src: url(../../src/fonts/HelveticaNeue-Medium-Italic.ttf);
+  font-family: 'Helvetica Neue';
+  font-style: italic;
+  font-weight: 500;
+}
+
+@font-face {
+  src: url(../../src/fonts/HelveticaNeue-Bold.ttf);
+  font-family: 'Helvetica Neue';
+  font-style: normal;
+  font-weight: bold;
+}
+
+@font-face {
+  src: url(../../src/fonts/HelveticaNeue-Bold-Italic.ttf);
+  font-family:'Helvetica Neue';
+  font-style: italic;
+  font-weight: bold;
+}
+
+$sans-serif: 'Helvetica Neue', Helvetica, Roboto, Arial, sans-serif;
+.sans-serif { font-family: $sans-serif; }
+
+@font-face {
+  src: url(../../src/fonts/Bungee-Shade.otf);
+  font-family: 'Bungee';
+  font-style: normal;
+  font-weight: normal;
+}
+
+/* === Mono === */
+
+@font-face {
+  src: url(../../src/fonts/Inconsolata.otf);
+  font-family: 'Inconsolata';
+  font-style: normal;
+  font-weight: normal;
+}
+
+$mono: "Inconsolata", "Consolas", mono;
+.mono { font-family: $mono; }
+
+/* Font sizes
+   ================================ */
+
+/* These are guesses... */
+
+$type-huge: 2.6em; // ~33px
+$type-larger: 2rem; // ~29px
+$type-large: 1.6em; // ~ 23px
+$type-medium-large: 1.4rem; // ~21px
+$type-medium: 1.2rem; // ~17px
+$type-normal: 1rem; // ~15px
+$type-smaller: 0.85rem; // ~13px
+$type-small: 0.8rem; // ~11px
+
+.type-large { font-size: $type-large; }
+.type-normal { font-size: $type-normal; }
+.type-small { font-size: $type-small; }
+
+.italic { font-style: italic; }
+.type-centered { text-align: center; }

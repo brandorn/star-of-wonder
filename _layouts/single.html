@@ -1,0 +1,58 @@
+---
+layout: default
+---
+
+<div class="song-container">
+
+	<div class="song-overview">
+
+		{% if page.thumb %}
+		<div class="song-artwork">
+			<img src="{{ site.baseurl }}/img/singles/{{ page.thumb }}" alt="Cover for {{ page.title }}">
+		</div>
+		{% endif %}
+
+		<div class="song-info">
+			<p class="type"><a href="/music">Music</a> <span class="divider">/</span> Single</p>
+			<h1>{{ page.title }}</h1>
+			<p class= "song-meta artists">Artist{% if page.artists contains "," %}<span>s</span>{% endif %}: {{ page.artists }}</p>
+		</div>
+
+
+	</div> <!-- .song-overview -->
+	
+	
+	<div class="song-content">
+		<div class="recording-primary">
+			<div> {{ page.primary_recording }} </div>
+		</div>
+		<div class="lyrics"> {{ page.content }} </div>
+	</div> <!-- .song-content-->
+	
+	{% for item in site.categories.songs %}
+	{% if item.title == page.title and item.url contains 'notes' %}
+	<div class="song-analysis">
+	<h2>Notes</h2>
+	{{ item.content }}
+	</div>
+	{% endif %}
+	{% endfor %}
+
+	{% if page.other_recordings %}
+	<div class="song-analysis">
+	<h2>Remixes and Other Recordings</h2>
+	{% for item in page.other_recordings %}
+	<div class="other-recordings">
+		<iframe width="480" height="270" src="{{ item.source }}" frameborder="0" gesture="media" allow="encrypted-media" allowfullscreen></iframe>
+	</div>
+	<p class="description">{{ item.description }}</p>
+	{% endfor %}
+	</div> <!-- .song-analysis -->
+	{% endif %}
+	
+
+	<!-- list of singles -->
+
+</div> <!-- .container-main .song -->
+
+

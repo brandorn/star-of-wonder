@@ -1,0 +1,29 @@
+---
+layout: default
+---
+
+<div class="commentary-container">
+	<h1>{{ page.title }}</h1>
+
+	<p class="description">{{ page.lede }}</p>
+
+	<div class="attribution">
+		<p class="author"><span>by</span> {{ page.author }}</p>
+		<p class="date">{{ page.date | date: '%-d %B %Y'}}</p>
+		<!-- <p class="type"><a href="/commentary">Commentary</a></p> -->
+	</div>
+
+	{% if page.intro_image %}
+	{% for image_item in page.intro_image %}
+	<figure class="intro-image">
+		<img src="/img/commentary/{{ image_item.image }}" alt="">
+		<cite>{{ image_item.caption }}</cite>
+	</figure>
+	{% endfor %}
+	{% endif %}
+
+	<div class="commentary-content">
+		{{ page.content }}
+	</div>
+	
+</div> <!-- .commentary-container -->

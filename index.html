@@ -32,7 +32,7 @@ description: A closer look at the life and work of Sufjan Stevens.
 
 	{% assign album_list = site.categories.music | limit:6 %}
 	{% for item in album_list %}
-	{% if item.type == 'album' or item.type == 'ep' item.type == 'other' %}
+	{% if item.type == 'album' or item.type == 'ep' or item.type == 'other' %}
 	{% unless item.sub_type == 'ballet score'%}
 	<div class="album">
 		<a href="{{ item.url }}">

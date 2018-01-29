@@ -5,7 +5,7 @@ permalink: /music/:title
 single: yes
 
 title: Exploding Whale
-artists: Sufjan Stevens, This person
+artists: Sufjan Stevens
 thumb: exploding-whale.png
 
 primary_recording:

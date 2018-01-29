@@ -14,23 +14,7 @@ producer: Sufjan Stevens, Thomas Bartlett, Pat Dillet
 
 images:
 - image: carrie-and-lowell-cover.jpg
-  title: cover description
-- image: carrie-and-lowell-1.png
-  title: description 1 Curabitur blandit tempus porttitor. Cras mattis consectetur purus sit amet fermentum.
-- image: carrie-and-lowell-2.png
-  title: description 2
-- image: carrie-and-lowell-1.png
-  title: description 1
-- image: carrie-and-lowell-2.png
-  title: description 2
-- image: carrie-and-lowell-1.png
-  title: description 1
-- image: carrie-and-lowell-2.png
-  title: description 2
-- image: carrie-and-lowell-1.png
-  title: description 1
-- image: carrie-and-lowell-2.png
-  title: description 2
+  title: Cover of Carrie & Lowell
 
 ---
 	

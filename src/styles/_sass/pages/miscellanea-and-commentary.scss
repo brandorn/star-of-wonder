@@ -33,6 +33,8 @@
 		> p { 
 			font-family: $serif;
 			font-size: 1.3rem;
+
+			@media all and (min-width: $break-large) { font-size: $type-medium; }
 		}
 	}
 } 
@@ -125,6 +127,8 @@
 .story-content {
 	margin: 0 auto;
 	max-width: $text-width-wider;
+
+	@media all and (min-width: $break-large) { max-width: 640px; }
 }
 
 .story-content {

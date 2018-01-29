@@ -26,8 +26,7 @@
 .album-container.overview {
 	
 	h1 { 
-		font-family: $serif;
-		font-size: 4.2rem;
+		font-size: 3.8rem;
 		font-weight: bold;
 		line-height: 120%;
 		margin: 0.5rem 0;
@@ -155,7 +154,7 @@
 		&:before {
 			content: "0" counter(item);
 			display: block;
-			font-size: $type-medium;
+			font-size: $type-normal;
 			position: absolute;
 			top: 1.3rem;
 			z-index: -1;
@@ -218,13 +217,10 @@ $break-song: 820px;
 		p {
 
 			a:link,
-			a:visited { border-bottom: none; }
+			a:visited { }
 
 			a:hover,
-			a:active { 
-				border-bottom: none; 
-				text-decoration: underline;
-			}
+			a:active { text-decoration: underline; }
 		}
 	} // .song-overview
 
@@ -260,7 +256,13 @@ $break-song: 820px;
 		font-size: $type-smaller;
 		margin: 0.3rem 0;
 
-		.album { font-weight: 600; }
+		.album { 
+			&:link,
+			&:visited { text-decoration: underline; } 
+
+			&:active,
+			&:hover { text-decoration: none; }
+		}
 	}
 
 	.song-content { 
@@ -412,7 +414,10 @@ $break-song: 820px;
 		.track-list li {
 			border-bottom: none;
 
-			&:before { top: 0.4rem; }
+			&:before { 
+				font-size: $type-smaller;
+				top: 0.5rem;
+			}
 
 			a { 
 				display: inline-block;
@@ -424,9 +429,19 @@ $break-song: 820px;
 
 			p { font-size: 1rem; }
 
-			&.this-track p {
-				color: rgba(0, 0, 0, 0.4);
-				padding: 0.75rem 0 0.75rem 2.25rem; 
+			.remix-label { 
+				font-size: $type-small; 
+				margin-top: 0.35rem;
+			}
+
+			&.this-track {
+				&:before { color: rgba(0, 0, 0, 0.4);}
+
+				p {
+					color: rgba(0, 0, 0, 0.4);
+					padding: 0.75rem 0 0.75rem 2.25rem; 
+				}
+			
 			} //.this-track 
 			
 		} // .track-list

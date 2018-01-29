@@ -10,6 +10,10 @@ artists: Sufjan Stevens
 
 primary_recording: '<iframe style="border: 0; width: 100%; height: 120px;" src="http://bandcamp.com/EmbeddedPlayer/album=4070884389/size=large/bgcol=333333/linkcol=ffffff/tracklist=false/artwork=none/track=2612958382/transparent=true/" seamless><a href="http://music.sufjan.com/album/carrie-lowell">Carrie &amp; Lowell by Sufjan Stevens</a></iframe>'
 
+other_recordings:
+- source: '<iframe style="border: 0; width: 100%; height: 120px;" src="http://bandcamp.com/EmbeddedPlayer/album=4274823433/size=large/bgcol=333333/linkcol=ffffff/tracklist=false/artwork=none/track=918763952/transparent=true/" seamless><a href="http://music.sufjan.com/album/the-greatest-gift">The Greatest Gift by Sufjan Stevens</a></iframe>'
+  description:
+
 ---
 
 Shall we beat this or celebrate it? <br>

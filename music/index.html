@@ -20,7 +20,7 @@ description: This is the description
 <div id="albums" class="album-grid primary">
 	{% assign album_list = site.categories.music %}
 	{% for item in album_list %}
-	{% if item.type == 'album' %}
+	{% if item.type == 'album' or item.type == 'ep' %}
 	<div class="album">
 		<a href="{{ item.url }}">
 			<div class="image">

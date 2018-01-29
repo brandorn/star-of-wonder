@@ -32,7 +32,7 @@ description: A closer look at the life and work of Sufjan Stevens.
 
 	{% assign album_list = site.categories.music | limit:6 %}
 	{% for item in album_list %}
-	{% if item.type == 'album' or item.type == 'other' %}
+	{% if item.type == 'album' or item.type == 'ep' item.type == 'other' %}
 	{% unless item.sub_type == 'ballet score'%}
 	<div class="album">
 		<a href="{{ item.url }}">
@@ -55,10 +55,9 @@ description: A closer look at the life and work of Sufjan Stevens.
 	<div class="album singles">
 		<h2 class="home">Singles</h2>
 		<ul class="singles-list">
-			{% assign singles_list = site.categories.songs %}
-			{% for item in singles_list | limit:3 %}
+			{% assign song_list = site.categories.songs | limit:3 %}
+			{% for item in song_list %}
 			{% if item.single %}
-			{% unless item.url contains 'notes' %}
 			<li>
 				<a href="{{ item.url }}">
 					{% if item.thumb %}
@@ -68,10 +67,10 @@ description: A closer look at the life and work of Sufjan Stevens.
 					<p class="type">{{ item.date | date: '%Y' }}</p>
 				</a>
 			</li>
-			{% endunless %}
 			{% endif %}
 			{% endfor %}
 		</ul>
+
 	</div>
 	
 </div> <!-- .album-grid.primary -->

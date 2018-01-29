@@ -6,7 +6,7 @@ layout: default
 
 <div class="album-container overview">
 
-	<p class="type"><a href="/music">{{ page.type }}</a></p>
+	<p class="type"><a href="/music">{% if page.sub_type %}{{ page.sub_type}} {% else %} {{ page.type }} {% endif %}</a></p>
 
 	<h1>{{ album_title }}</h1>
 
@@ -24,14 +24,18 @@ layout: default
 				<td>Artists</td>
 				<td>{{ page.artists }}</td>
 			</tr>
+			{% if album.producer %}
 			<tr>
 				<td>Produced by</td>
 				<td>{{ page.producer }}</td>
 			</tr>
+			{% endif %}
+			{% if album.location %}
 			<tr>
 				<td>Location</td>
 				<td>{{ page.location }}</td>
 			</tr>
+			{% endif %}
 		</tbody>
 	</table>
 

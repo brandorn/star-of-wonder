@@ -131,6 +131,8 @@
   text-align: center; }
 
 html {
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
   -webkit-text-size-adjust: 100%;
   box-sizing: border-box;
   font: 15px/1.5 -apple-system, BlinkMacSystemFont, "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;
@@ -154,6 +156,9 @@ body {
   @media screen and (max-width: 600px) {
     body {
       padding: 0 1rem; } }
+  @media all and (min-width: 1300px) {
+    body {
+      max-width: 1280px; } }
 
 section {
   margin: 0 auto; }
@@ -307,6 +312,7 @@ nav {
         display: block;
         text-align: center; } }
     nav .home-link h1 {
+      -webkit-font-smoothing: initial;
       font-family: "Bungee", Helvetica, Arial, sans-serif;
       font-size: 2rem;
       margin: 0; }
@@ -630,12 +636,12 @@ h2.home {
     .home-intro {
       display: block; } }
   .home-intro .intro-image {
-    background-image: url("/img/sufjan/sufjan-main.png");
+    background-image: url("/img/sufjan/sufjan-main.jpg");
     background-position: top;
     background-size: cover;
     min-height: 40vh;
     position: relative;
-    width: 50%; }
+    width: 54%; }
     @media screen and (max-width: 600px) {
       .home-intro .intro-image {
         width: 100%; } }
@@ -1394,8 +1400,7 @@ h2.home {
       margin: 3rem auto; } }
 
 .album-container.overview h1 {
-  font-family: "Calluna", Georgia, serif;
-  font-size: 4.2rem;
+  font-size: 3.8rem;
   font-weight: bold;
   line-height: 120%;
   margin: 0.5rem 0; }
@@ -1507,7 +1512,7 @@ h2.home {
     .track-list li:before {
       content: "0" counter(item);
       display: block;
-      font-size: 1.2rem;
+      font-size: 1rem;
       position: absolute;
       top: 1.3rem;
       z-index: -1; }
@@ -1545,12 +1550,8 @@ h2.home {
     display: flex;
     margin-top: 1rem;
     padding-bottom: 3rem; }
-    .song-container .song-overview p a:link,
-    .song-container .song-overview p a:visited {
-      border-bottom: none; }
     .song-container .song-overview p a:hover,
     .song-container .song-overview p a:active {
-      border-bottom: none;
       text-decoration: underline; }
   .song-container .song-artwork {
     margin-right: 2rem;
@@ -1577,8 +1578,10 @@ h2.home {
   .song-container .song-meta {
     font-size: 0.85rem;
     margin: 0.3rem 0; }
-    .song-container .song-meta .album {
-      font-weight: 600; }
+    .song-container .song-meta .album:link, .song-container .song-meta .album:visited {
+      text-decoration: underline; }
+    .song-container .song-meta .album:active, .song-container .song-meta .album:hover {
+      text-decoration: none; }
   .song-container .song-content {
     border-bottom: 1px solid rgba(0, 0, 0, 0.1);
     display: flex;
@@ -1683,7 +1686,8 @@ h2.home {
     .song-container .album-track-list .track-list li {
       border-bottom: none; }
       .song-container .album-track-list .track-list li:before {
-        top: 0.4rem; }
+        font-size: 0.85rem;
+        top: 0.5rem; }
       .song-container .album-track-list .track-list li a {
         display: inline-block;
         padding: 0.75rem 0 0.75rem 2.25rem;
@@ -1692,6 +1696,11 @@ h2.home {
         color: black; }
       .song-container .album-track-list .track-list li p {
         font-size: 1rem; }
+      .song-container .album-track-list .track-list li .remix-label {
+        font-size: 0.8rem;
+        margin-top: 0.35rem; }
+      .song-container .album-track-list .track-list li.this-track:before {
+        color: rgba(0, 0, 0, 0.4); }
       .song-container .album-track-list .track-list li.this-track p {
         color: rgba(0, 0, 0, 0.4);
         padding: 0.75rem 0 0.75rem 2.25rem; }
@@ -1734,6 +1743,12 @@ h2.home {
 .commentary .commentary-content > p {
   font-family: "Calluna", Georgia, serif;
   font-size: 1.3rem; }
+  @media all and (min-width: 1300px) {
+    .miscellanea .story-content > p,
+    .miscellanea .commentary-content > p,
+    .commentary .story-content > p,
+    .commentary .commentary-content > p {
+      font-size: 1.2rem; } }
 
 /* Miscellanea
    ================================ */
@@ -1796,6 +1811,10 @@ h2.home {
 .story-content {
   margin: 0 auto;
   max-width: 600px; }
+  @media all and (min-width: 1300px) {
+    .miscellanea-notes,
+    .story-content {
+      max-width: 640px; } }
 
 .story-content p .uppercase {
   font-size: 1.2rem;

@@ -11,8 +11,10 @@ artists: Sufjan Stevens, others
 primary_recording: '<iframe style="border: 0; width: 100%; height: 120px;" src="http://bandcamp.com/EmbeddedPlayer/album=4070884389/size=large/bgcol=333333/linkcol=ffffff/tracklist=false/artwork=none/track=2233352563/transparent=true/" seamless><a href="http://music.sufjan.com/album/carrie-lowell">Carrie &amp; Lowell by Sufjan Stevens</a></iframe>'
 
 other_recordings:
-- source: https://www.youtube.com/embed/QY4pe0dq0v8
-  description: This is a description of the recording...
+- source: '<iframe style="border: 0; width: 100%; height: 120px;" src="http://bandcamp.com/EmbeddedPlayer/album=4274823433/size=large/bgcol=333333/linkcol=ffffff/tracklist=false/artwork=small/track=3205222011/transparent=true/" seamless><a href="http://music.sufjan.com/album/the-greatest-gift">The Greatest Gift by Sufjan Stevens</a></iframe>'
+  description:
+- source: '<iframe style="border: 0; width: 100%; height: 120px;" src="http://bandcamp.com/EmbeddedPlayer/album=4274823433/size=large/bgcol=333333/linkcol=ffffff/tracklist=false/artwork=small/track=1631336907/transparent=true/" seamless><a href="http://music.sufjan.com/album/the-greatest-gift">The Greatest Gift by Sufjan Stevens</a></iframe>'
+  description: 
 
 ---
 

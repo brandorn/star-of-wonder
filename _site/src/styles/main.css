@@ -1502,7 +1502,7 @@ h2.home {
 
 .track-list {
   list-style: none;
-  margin: -1rem auto 6rem auto; }
+  margin: 3rem auto 6rem auto; }
   .track-list li {
     border-bottom: 1px solid rgba(0, 0, 0, 0.1);
     counter-increment: item;
@@ -1510,33 +1510,31 @@ h2.home {
     padding: 0;
     position: relative; }
     .track-list li:before {
+      color: rgba(0, 0, 0, 0.6);
       content: "0" counter(item);
       display: block;
       font-size: 1rem;
       position: absolute;
-      top: 1.3rem;
+      top: -3px;
       z-index: -1; }
     .track-list li:nth-child(n+10):before {
       content: counter(item); }
     .track-list li p {
       font-size: 1.2rem;
       line-height: 100%;
-      margin: 0;
+      margin: 1.5rem 0;
+      padding-left: 2.5rem;
       width: 100%; }
-    .track-list li a {
+    .track-list li a:link, .track-list li a:visited {
+      border-bottom: none; }
+    .track-list li a:hover, .track-list li a:active {
+      border-bottom: none;
+      color: #bb6cf1; }
+    .track-list li a .remix-label {
+      color: rgba(0, 0, 0, 0.6);
       display: block;
-      padding: 1.5rem 0 1.5rem 3rem;
-      width: 100%; }
-      .track-list li a:link, .track-list li a:visited {
-        border-bottom: none; }
-      .track-list li a:hover, .track-list li a:active {
-        border-bottom: none;
-        color: #bb6cf1; }
-      .track-list li a .remix-label {
-        color: rgba(0, 0, 0, 0.6);
-        display: block;
-        font-size: 0.85rem;
-        margin-top: 0.5rem; }
+      font-size: 0.85rem;
+      margin-top: 0.5rem; }
 
 /* Songs
    ================================ */
@@ -1683,27 +1681,29 @@ h2.home {
       letter-spacing: 0;
       margin: 0 0 2rem 0;
       text-transform: capitalize; }
-    .song-container .album-track-list .track-list li {
-      border-bottom: none; }
-      .song-container .album-track-list .track-list li:before {
-        font-size: 0.85rem;
-        top: 0.5rem; }
-      .song-container .album-track-list .track-list li a {
-        display: inline-block;
-        padding: 0.75rem 0 0.75rem 2.25rem;
-        width: auto; }
-      .song-container .album-track-list .track-list li:before {
-        color: black; }
-      .song-container .album-track-list .track-list li p {
-        font-size: 1rem; }
-      .song-container .album-track-list .track-list li .remix-label {
-        font-size: 0.8rem;
-        margin-top: 0.35rem; }
-      .song-container .album-track-list .track-list li.this-track:before {
-        color: rgba(0, 0, 0, 0.4); }
-      .song-container .album-track-list .track-list li.this-track p {
-        color: rgba(0, 0, 0, 0.4);
-        padding: 0.75rem 0 0.75rem 2.25rem; }
+    .song-container .album-track-list .track-list {
+      columns: 2; }
+      .song-container .album-track-list .track-list li {
+        border-bottom: none; }
+        .song-container .album-track-list .track-list li:before {
+          font-size: 0.85rem;
+          top: 8px; }
+        .song-container .album-track-list .track-list li a {
+          display: inline-block;
+          padding: 0.75rem 0 0.75rem 2rem;
+          width: auto; }
+        .song-container .album-track-list .track-list li:before {
+          color: black; }
+        .song-container .album-track-list .track-list li p {
+          font-size: 1rem; }
+        .song-container .album-track-list .track-list li .remix-label {
+          font-size: 0.8rem;
+          margin-top: 0.35rem; }
+        .song-container .album-track-list .track-list li.this-track:before {
+          color: rgba(0, 0, 0, 0.4); }
+        .song-container .album-track-list .track-list li.this-track p {
+          color: rgba(0, 0, 0, 0.4);
+          padding: 0.75rem 0 0.75rem 2.25rem; }
   .song-container .album-grid.song {
     display: flex;
     justify-content: flex-start; }

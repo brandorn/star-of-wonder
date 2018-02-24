@@ -13,7 +13,7 @@ artists: Sufjan Stevens
 producer: 
 
 images:
-- image: call-me-by-your-name-cover.jpg
-  title: Cover of Call Me By Your Name
+- source: call-me-by-your-name-cover.jpg
+  description: Cover of Call Me By Your Name
 ---
 	

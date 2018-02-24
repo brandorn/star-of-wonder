@@ -13,11 +13,8 @@ artists: Sufjan Stevens
 producer: 
 
 images:
-- image: beak-and-claw-cover.jpg
-  title: cover description
-- image: carrie-and-lowell-1.png
-  title: description 1
-- image: carrie-and-lowell-2.png
-  title: description 2
+- source: beak-and-claw-cover.jpg
+  description: 
+
 ---
 	

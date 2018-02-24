@@ -30,10 +30,10 @@ layout: default
 
 {% if page.type == 'other' %}
 <div class="other-content">
-{% for item in page.source %}
-{% if item.type == 'video' %}
+{% for item in page.primary_content %}
+{% if item.type == 'youtube' %}
 	<div class="miscellanea-video">
-		<iframe width="854" height="480" src="{{ item.thing }}" frameborder="0" gesture="media" allow="encrypted-media" allowfullscreen></iframe>
+		<iframe width="854" height="480" src="https://www.youtube.com/embed/{{ item.id }}" frameborder="0" gesture="media" allow="encrypted-media" allowfullscreen></iframe>
 	</div>
 {% endif %}
 {% endfor %}

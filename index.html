@@ -37,9 +37,9 @@ description: A closer look at the life and work of Sufjan Stevens.
 	<div class="album">
 		<a href="{{ item.url }}">
 			<div class="image">
-				{% for images in item.images %}
-				{% if images.image contains "cover" %}
-					<img class="cover" src="../img/music/{{ images.image }}" title="">
+				{% for image_item in item.images %}
+				{% if image_item.source contains "cover" %}
+					<img class="cover" src="../img/music/{{ image_item.source }}" title="{{ image_iteml.description }}">
 				{% endif %}
 				{% endfor %}
 			</div>

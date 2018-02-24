@@ -11,14 +11,15 @@ track_count: [if album]
 label: [if album]
 artists: Sufjan Stevens
 producer: [if album]
-description: [if miscellanea]
+description: [unless album]
+
+primary_content:
+- id: yMTv_Y0Zrl4
+  type: youtube
 
 images:
-- image: beak-and-claw-cover.jpg
-  title: cover description
-- image: carrie-and-lowell-1.png
-  title: description 1
-- image: carrie-and-lowell-2.png
-  title: description 2
+- source: 
+  description:
+
 ---
 	

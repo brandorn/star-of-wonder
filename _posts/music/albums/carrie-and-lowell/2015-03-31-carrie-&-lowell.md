@@ -16,8 +16,8 @@ bandcamp_album_id: 4070884389
 bandcamp_album_link: http://music.sufjan.com/album/carrie-lowell
 
 images:
-- image: carrie-and-lowell-cover.jpg
-  title: Cover of Carrie & Lowell
+- source: carrie-and-lowell-cover.jpg
+  description: Cover of Carrie & Lowell
 
 ---
 	

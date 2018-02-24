@@ -41,10 +41,10 @@ layout: default
 
 	<div class="lightbox-1 album-art">
 
-		{% for images in page.images %}
+		{% for item in page.images %}
 		{% assign image_number = forloop.length %}
-		<a href="../img/music/{{ images.image }}" class="{% if images.image contains "cover" %} cover {% else %} secondary {% endif %}" title="{{ images.title }} <span class='image-count'>{{ forloop.index }} of {{ forloop.length }}</span>">
-			<img src="../img/music/{{ images.image }}"/>
+		<a href="../img/music/{{ item.source }}" class="{% if item.source contains "cover" %} cover {% else %} secondary {% endif %}" title="{{ item.description }} <span class='image-count'>{{ forloop.index }} of {{ forloop.length }}</span>">
+			<img src="../img/music/{{ item.source }}"/>
 		</a>
 		{% endfor %}
 

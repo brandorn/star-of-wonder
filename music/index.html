@@ -25,8 +25,8 @@ description: This is the description
 		<a href="{{ item.url }}">
 			<div class="image">
 				{% for images in item.images %}
-				{% if images.image contains "cover" %}
-					<img class="cover" src="../img/music/{{ images.image }}" title="">
+				{% if images.source contains "cover" %}
+					<img class="cover" src="../img/music/{{ images.source }}" title="">
 				{% endif %}
 				{% endfor %}
 			</div>

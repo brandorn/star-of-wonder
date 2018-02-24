@@ -8,13 +8,13 @@ title: In the Countenance of Kings
 artists: Sufjan Stevens
 description: Donec sed odio dui. Donec ullamcorper nulla non metus auctor fringilla.
 
-images:
-- image: in-the-countenance-cover.png
-  title: cover description
+primary_content:
+- id: yMTv_Y0Zrl4
+  type: [youtube, could be other things]
 
-source:
-- thing: https://www.youtube.com/embed/yMTv_Y0Zrl4?rel=0
-  type: video
+images:
+- source: in-the-countenance-cover.jpg
+  description: 
 
 ---
 

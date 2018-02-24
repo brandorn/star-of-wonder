@@ -12,6 +12,9 @@ label:
 location: 
 producer: 
 
+bandcamp_album_id:
+bandcamp_album_link:
+
 images:
 - image: carrie-and-lowell-cover.jpg
   title: cover description

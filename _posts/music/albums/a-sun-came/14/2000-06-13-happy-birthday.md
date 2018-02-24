@@ -8,7 +8,9 @@ album: A Sun Came
 track_number: 14
 artists: Sufjan Stevens
 
-primary_recording: '<iframe style="border: 0; width: 100%; height: 120px;" src="http://bandcamp.com/EmbeddedPlayer/album=832878843/size=large/bgcol=333333/linkcol=ffffff/tracklist=false/artwork=none/track=1710738233/transparent=true/" seamless><a href="http://music.sufjan.com/album/a-sun-came">A Sun Came by Sufjan Stevens</a></iframe>'
+primary_recording:
+- id: 1710738233
+  type: bandcamp
 
 ---
 

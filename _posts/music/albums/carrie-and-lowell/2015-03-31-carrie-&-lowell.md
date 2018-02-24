@@ -12,6 +12,9 @@ label: <a href="http://asthmatickitty.com">Asthmatic Kitty</a>
 location: Portland, OR (engineered by Tucker Martine); Black Watch, Norman, OK (engineered by Chad Copelin and Jarod Evans); April Base, Eau Claire, WI (engineered by Brian Joseph); Pat Dillet's studio, “somewhere midtown Manhattan;” Sufjan's office in Dumbo, Brooklyn; a hotel room in Klaamath Falls, Oregon
 producer: Sufjan Stevens, Thomas Bartlett, Pat Dillet
 
+bandcamp_album_id: 4070884389
+bandcamp_album_link: http://music.sufjan.com/album/carrie-lowell
+
 images:
 - image: carrie-and-lowell-cover.jpg
   title: Cover of Carrie & Lowell

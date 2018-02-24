@@ -8,12 +8,13 @@ album: The Greatest Gift
 track_number: 6
 artists: Sufjan Stevens
 
-primary_recording: '<iframe style="border: 0; width: 100%; height: 120px;" src="http://bandcamp.com/EmbeddedPlayer/album=4274823433/size=large/bgcol=333333/linkcol=ffffff/tracklist=false/artwork=small/track=958602921/transparent=true/" seamless><a href="http://music.sufjan.com/album/the-greatest-gift">The Greatest Gift by Sufjan Stevens</a></iframe>'
+primary_recording:
+- id: 958602921
+  type: bandcamp
 
 other_recordings:
-- source: https://www.youtube.com/embed/22QKbw_c_yM?rel=0
+- id:
   description:
-  video: yes
 
 ---
 

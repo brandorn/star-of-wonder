@@ -8,7 +8,9 @@ album: Call Me By Your Name
 track_number: 2
 artists: Sufjan Stevens
 
-primary_recording: '<iframe width="560" height="315" src="https://www.youtube.com/embed/N0CP9zpbmAQ?rel=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>'
+primary_recording: 
+- id: N0CP9zpbmAQ
+  type: youtube
 
 ---
 

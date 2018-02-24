@@ -8,10 +8,12 @@ album: Carrie & Lowell
 track_number: 3
 artists: Sufjan Stevens
 
-primary_recording: '<iframe style="border: 0; width: 100%; height: 120px;" src="http://bandcamp.com/EmbeddedPlayer/album=4070884389/size=large/bgcol=333333/linkcol=ffffff/tracklist=false/artwork=none/track=2612958382/transparent=true/" seamless><a href="http://music.sufjan.com/album/carrie-lowell">Carrie &amp; Lowell by Sufjan Stevens</a></iframe>'
+primary_recording:
+- id: 2612958382
+  type: bandcamp
 
 other_recordings:
-- source: '<iframe style="border: 0; width: 100%; height: 120px;" src="http://bandcamp.com/EmbeddedPlayer/album=4274823433/size=large/bgcol=333333/linkcol=ffffff/tracklist=false/artwork=none/track=918763952/transparent=true/" seamless><a href="http://music.sufjan.com/album/the-greatest-gift">The Greatest Gift by Sufjan Stevens</a></iframe>'
+- id: TiVFIb8Nc60
   description:
 
 ---

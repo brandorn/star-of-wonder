@@ -11,6 +11,9 @@ track_count: 11
 label: Asthmatic Kitty
 producer: Sufjan Stevens
 
+bandcamp_album_id: 4274823433
+bandcamp_album_link: http://music.sufjan.com/album/the-greatest-gift
+
 images:
 - image: the-greatest-gift-cover.jpg
   title: cover description

@@ -10,7 +10,8 @@ artists: Sufjan Stevens,
 track_count: 
 label: 
 location: 
-producer: 
+producer:
+copyright:
 
 bandcamp_album_id:
 bandcamp_album_link:

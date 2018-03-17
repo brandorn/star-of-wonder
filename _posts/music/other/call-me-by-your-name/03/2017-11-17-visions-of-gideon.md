@@ -8,7 +8,9 @@ album: Call Me By Your Name
 track_number: 3
 artists: Sufjan Stevens
 
-primary_recording: '<iframe width="560" height="315" src="https://www.youtube.com/embed/NJLs-4J5ZYk?rel=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>'
+primary_recording:
+- id: NJLs-4J5ZYk
+  type: youtube
 
 ---
 

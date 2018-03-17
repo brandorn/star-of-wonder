@@ -11,16 +11,7 @@ description: A closer look at the life and work of Sufjan Stevens.
 	</div>
 	<div class="intro-statement">
 		<p><a href="/commentary">Exploring</a> the <a href="/music">music</a>, <a href="/miscellanea">writing</a>, <a href="/miscellanea#sufjan-dot-com">musings</a>, and <a href="/miscellanea#film-and-other-media">makings</a> of <a href="/sufjan">Sufjan Stevens</a>.</p>
-
-		<div class="miscellanea-item">
-			<p class="title"><a href="#">Intro Article</a></p>
-			<p class="lede">Sed posuere consectetur est at lobortis. Maecenas sed diam eget risus varius blandit sit amet non magna.</p>
-			<!-- <p class="meta">
-				<span class="author">Brandon Dorn</span>
-				<span class="type"><span class="divider">/</span> May 2011</span>
-			</p> -->
-			
-		</div>
+		<p class="description">Sed posuere consectetur est at lobortis. Maecenas sed diam eget risus varius blandit sit amet non magna. Vestibulum id ligula porta felis euismod semper.</p>
 	</div>
 </div> <!-- .home-intro -->
 
@@ -30,8 +21,8 @@ description: A closer look at the life and work of Sufjan Stevens.
 
 <div class="home album-grid primary">
 
-	{% assign album_list = site.categories.music | limit:6 %}
-	{% for item in album_list %}
+	{% assign album_list = site.categories.music %}
+	{% for item in album_list limit:6 %}
 	{% if item.type == 'album' or item.type == 'ep' or item.type == 'other' %}
 	{% unless item.sub_type == 'ballet score'%}
 	<div class="album">
@@ -55,8 +46,8 @@ description: A closer look at the life and work of Sufjan Stevens.
 	<div class="album singles">
 		<h2 class="home">Singles</h2>
 		<ul class="singles-list">
-			{% assign song_list = site.categories.songs | limit:3 %}
-			{% for item in song_list %}
+			{% assign song_list = site.categories.songs %}
+			{% for item in song_list limit:3 %}
 			{% if item.single %}
 			<li>
 				<a href="{{ item.url }}">
@@ -100,8 +91,8 @@ description: A closer look at the life and work of Sufjan Stevens.
 
 		<div class="miscellanea-container">
 
-			{% assign miscellanea_list = site.categories.miscellanea | sort:'year' | limit:8 %}
-			{% for item in miscellanea_list %}
+			{% assign miscellanea_list = site.categories.miscellanea | sort:'year' %}
+			{% for item in miscellanea_list limit:8  %}
 			{% unless item.url contains "notes" %}
 			<div class="miscellanea-item">
 				<a class="thumb"  href="{{ item.url }}">
@@ -128,8 +119,8 @@ description: A closer look at the life and work of Sufjan Stevens.
 	<div class="commentary-list">
 		<h2 class="home" >Commentary</h2>
 
-		{% assign commentary_list = site.categories.commentary | sort:'year' | limit:4 %}
-		{% for item in commentary_list %}
+		{% assign commentary_list = site.categories.commentary | sort:'year' %}
+		{% for item in commentary_list limit:4 %}
 		<div class="commentary-item">
 			<a href="{{ item.url }}"><div class="image"><img src="/img/commentary/{{ item.thumb }}" alt=""></div></a>
 			<p class="title"><a href="{{ item.url }}">{{ item.title }}</a></p>

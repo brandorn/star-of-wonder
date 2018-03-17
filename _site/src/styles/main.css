@@ -130,6 +130,12 @@
 .type-centered {
   text-align: center; }
 
+.lower-case {
+  text-transform: none; }
+
+.normal-spacing {
+  letter-spacing: 0; }
+
 html {
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
@@ -145,7 +151,7 @@ html {
       font-size: 14px; } }
 
 body {
-  color: black;
+  color: #333;
   font-variant-ligatures: normal;
   line-height: 140%;
   margin: 0 auto;
@@ -193,7 +199,7 @@ a {
   -webkit-tap-highlight-color: transparent;
   text-decoration: none; }
   a:link, a:visited {
-    color: black; }
+    color: #333; }
 
 blockquote {
   margin: 2rem; }
@@ -298,12 +304,12 @@ strong {
 nav {
   font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;
   margin: 0 auto 2rem auto;
-  margin: 1rem 0 3rem 0; }
+  margin: 1rem 0 2rem 0; }
   nav a:link,
   nav a:visited,
   nav a:hover,
   nav a:active {
-    color: black; }
+    color: #333; }
   nav .home-link {
     border-bottom: none;
     display: inline-block; }
@@ -357,8 +363,8 @@ nav {
       nav ul.page-links li a:hover, nav ul.page-links li a:active {
         color: rgba(0, 0, 0, 0.4); }
       nav ul.page-links li.active a {
-        border-bottom: 2px solid black;
-        color: black; }
+        border-bottom: 2px solid #333;
+        color: #333; }
 
 /* === Footer === */
 footer {
@@ -468,7 +474,7 @@ figcaption {
     color: rgba(0, 0, 0, 0.6); }
   figcaption a:hover,
   figcaption a:active {
-    border-bottom: 1px solid black; }
+    border-bottom: 1px solid #333; }
 
 /* Annotations
    ================================ */
@@ -478,9 +484,9 @@ figcaption {
     border-bottom: 1px solid rgba(0, 0, 0, 0.1); }
   .annotation-link:hover, .annotation-link:active, .annotation-link.annotation-active {
     border-bottom: none;
-    color: #bb6cf1; }
+    color: #27A0BE; }
     .annotation-link:hover:after, .annotation-link:active:after, .annotation-link.annotation-active:after {
-      color: #bb6cf1; }
+      color: #27A0BE; }
   .annotation-link:focus {
     outline: none; }
   .annotation-link:after {
@@ -493,7 +499,7 @@ figcaption {
     position: absolute; }
   .annotation-link.annotation-link-selected {
     border-bottom: none;
-    color: #bb6cf1; }
+    color: #27A0BE; }
   .annotation-link.annotation-link-selected:after {
     color: rgba(0, 0, 0, 0.6);
     content: "×";
@@ -551,7 +557,7 @@ figcaption {
   animation: none;
   display: block;
   position: fixed;
-  color: #bb6cf1;
+  color: #27A0BE;
   height: 2rem;
   position: fixed;
   right: 2rem;
@@ -577,7 +583,7 @@ figcaption {
   .slbCloseBtn:hover {
     opacity: 1; }
     .slbCloseBtn:hover:after, .slbCloseBtn:hover:before {
-      border-top: 2px solid #bb6cf1; }
+      border-top: 2px solid #27A0BE; }
 
 .slbArrow {
   opacity: 1;
@@ -585,7 +591,7 @@ figcaption {
   .slbArrow:hover {
     opacity: 1; }
     .slbArrow:hover:before {
-      border-color: #bb6cf1; }
+      border-color: #27A0BE; }
   .slbArrow:before {
     border: none;
     border-width: 2px 2px 0 0;
@@ -596,7 +602,7 @@ figcaption {
   .slbArrow.prev {
     left: 1.5rem; }
     .slbArrow.prev:hover:before {
-      border-right-color: #bb6cf1; }
+      border-right-color: #27A0BE; }
     .slbArrow.prev:before {
       border-right-color: rgba(0, 0, 0, 0.6);
       margin-left: -2rem;
@@ -630,8 +636,7 @@ h2.home {
 
 .home-intro {
   display: flex;
-  margin-bottom: 3rem;
-  margin-top: -1rem; }
+  margin-bottom: 3rem; }
   @media screen and (max-width: 600px) {
     .home-intro {
       display: block; } }
@@ -662,16 +667,17 @@ h2.home {
         text-decoration: none; }
   .home-intro .intro-statement {
     padding: 1.5% 6%;
-    width: 42%; }
+    width: 44%; }
     @media screen and (max-width: 600px) {
       .home-intro .intro-statement {
         margin: 2rem auto;
         padding: 1rem 2rem;
         width: auto; } }
     .home-intro .intro-statement > p {
-      font-size: 3.2rem;
+      font-size: 3.4rem;
       font-weight: 600;
-      line-height: 130%; }
+      line-height: 140%;
+      margin: 1rem 0; }
       @media screen and (max-width: 1000px) {
         .home-intro .intro-statement > p {
           font-size: 2.8rem; } }
@@ -685,34 +691,17 @@ h2.home {
           text-align: center; } }
       .home-intro .intro-statement > p a:link,
       .home-intro .intro-statement > p a:visited {
-        border-bottom: 2px solid rgba(0, 0, 0, 0.1); }
+        text-decoration: underline; }
       .home-intro .intro-statement > p a:hover,
       .home-intro .intro-statement > p a:active {
-        border-bottom: 2px solid #bb6cf1; }
-    .home-intro .intro-statement .miscellanea-item {
-      margin: 3rem 0 1rem 0;
-      max-width: 360px;
-      width: auto; }
-      @media all and (max-width: 600px) {
-        .home-intro .intro-statement .miscellanea-item {
-          margin: 3rem auto 0 auto;
-          padding-top: 1rem; } }
-      .home-intro .intro-statement .miscellanea-item .title {
-        font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;
-        font-size: 1.2rem; }
-        .home-intro .intro-statement .miscellanea-item .title a:link, .home-intro .intro-statement .miscellanea-item .title a:visited {
-          border-bottom: none; }
-        .home-intro .intro-statement .miscellanea-item .title a:hover, .home-intro .intro-statement .miscellanea-item .title a:active {
-          border-bottom: none;
-          text-decoration: underline; }
-        @media all and (max-width: 600px) {
-          .home-intro .intro-statement .miscellanea-item .title a {
-            font-size: 1.2rem; } }
-      .home-intro .intro-statement .miscellanea-item .type {
-        padding-left: 0; }
-      .home-intro .intro-statement .miscellanea-item .lede {
-        font-size: 0.85rem;
-        margin-bottom: 0.5rem; }
+        color: #27A0BE;
+        text-decoration: underline; }
+    .home-intro .intro-statement .description {
+      font-size: 1rem;
+      font-weight: normal;
+      line-height: 170%;
+      margin-top: 3rem;
+      max-width: 400px; }
 
 .home.album-grid.primary {
   margin-bottom: 3rem;
@@ -873,14 +862,12 @@ h2.home {
     width: 100%; } }
 
 .index-intro {
-  margin: 0 auto;
+  margin: 0 auto 4rem auto;
   max-width: 500px; }
   .index-intro h1 {
-    font-family: "Calluna", Georgia, serif;
-    font-size: 4.5rem;
+    font-size: 3rem;
     font-weight: bold;
-    letter-spacing: 0;
-    margin-top: 0;
+    margin: 0;
     text-align: center; }
     @media all and (max-width: 900px) {
       .index-intro h1 {
@@ -890,7 +877,7 @@ h2.home {
         font-size: 3rem; } }
   .index-intro .section-description {
     color: rgba(0, 0, 0, 0.6);
-    margin-bottom: 3rem; }
+    text-align: center; }
   .index-intro .page-links {
     margin: 0 auto 1.5rem auto;
     text-align: center; }
@@ -905,7 +892,7 @@ h2.home {
         color: rgba(0, 0, 0, 0.6); }
       .index-intro .page-links a:hover, .index-intro .page-links a:active {
         border-bottom: none;
-        color: black; }
+        color: #333; }
 
 .album .meta,
 .miscellanea-item .meta,
@@ -962,7 +949,7 @@ h2.home {
   .song-container .type a:link,
   .song-container .type a:visited {
     border-bottom: none;
-    color: #bb6cf1; }
+    color: #27A0BE; }
   .album .type a:hover,
   .album .type a:active,
   .miscellanea-item .type a:hover,
@@ -978,7 +965,7 @@ h2.home {
   .song-container .type a:hover,
   .song-container .type a:active {
     border-bottom: none;
-    color: #bb6cf1;
+    color: #27A0BE;
     text-decoration: underline; }
 
 /* Landing lists
@@ -999,7 +986,7 @@ h2.home {
       display: block;
       width: 100%; }
     .miscellanea-item .thumb .type {
-      background-color: black;
+      background-color: #333;
       bottom: 0;
       color: #fff;
       display: table;
@@ -1021,7 +1008,7 @@ h2.home {
         font-size: 2rem;
         font-weight: normal; } }
   .miscellanea-item .lede {
-    color: black;
+    color: #333;
     font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;
     font-size: 1rem;
     line-height: 160%; }
@@ -1124,7 +1111,7 @@ h2.home {
         border-bottom: none; }
       .singles-list li a:hover, .singles-list li a:active {
         border-bottom: none;
-        color: #bb6cf1; }
+        color: #27A0BE; }
     .singles-list li .title {
       font-size: 1.25rem;
       line-height: 120%;
@@ -1205,7 +1192,7 @@ h2.home {
         .miscellanea-writing li .intro .title {
           display: inline-block; } }
     .miscellanea-writing li .lede {
-      color: black;
+      color: #333;
       font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;
       font-size: 1rem;
       font-style: normal;
@@ -1257,7 +1244,7 @@ h2.home {
     .miscellanea-other li a:active, .miscellanea-other li a:hover {
       border-bottom: none; }
       .miscellanea-other li a:active .title span, .miscellanea-other li a:hover .title span {
-        border-bottom: 2px solid black; }
+        border-bottom: 2px solid #333; }
     .miscellanea-other li .image img {
       width: 100%; }
     .miscellanea-other li .title {
@@ -1385,6 +1372,14 @@ h2.home {
   .song-container .type a:active {
     color: rgba(0, 0, 0, 0.6); }
 
+.copyright {
+  color: rgba(0, 0, 0, 0.4);
+  font-size: 0.85rem; }
+  .copyright.with-lyrics {
+    margin-top: -4rem; }
+  .copyright.instrumental {
+    text-align: center; }
+
 .album-container.overview,
 .album-container.tracks {
   margin-left: 34%;
@@ -1441,7 +1436,7 @@ h2.home {
     cursor: zoom-in; }
     .album-art a:hover:after,
     .album-art a:active:after {
-      color: #bb6cf1; }
+      color: #27A0BE; }
   .album-art .cover,
   .album-art .secondary {
     display: inline-block; }
@@ -1485,23 +1480,25 @@ h2.home {
     .album-details td .album {
       font-weight: 600; }
 
-@media all and (max-width: 600px) {
-  .album-container.tracks {
-    margin: 3rem auto 0 auto; } }
-.album-container.tracks > h2 {
-  display: none; }
+.album-container.tracks {
+  margin-bottom: 6rem; }
   @media all and (max-width: 600px) {
-    .album-container.tracks > h2 {
-      display: block; } }
-.album-container.tracks hr {
-  margin: 4rem 0 -1rem 0; }
-.album-container.tracks .secondary-content p {
-  font-family: "Calluna", Georgia, serif;
-  font-size: 1.2rem; }
+    .album-container.tracks {
+      margin: 3rem auto 0 auto; } }
+  .album-container.tracks > h2 {
+    display: none; }
+    @media all and (max-width: 600px) {
+      .album-container.tracks > h2 {
+        display: block; } }
+  .album-container.tracks hr {
+    margin: 4rem 0 -1rem 0; }
+  .album-container.tracks .secondary-content p {
+    font-family: "Calluna", Georgia, serif;
+    font-size: 1.2rem; }
 
 .track-list {
   list-style: none;
-  margin: 3rem auto 6rem auto; }
+  margin-top: 3rem; }
   .track-list li {
     border-bottom: 1px solid rgba(0, 0, 0, 0.1);
     counter-increment: item;
@@ -1528,7 +1525,7 @@ h2.home {
       border-bottom: none; }
     .track-list li a:hover, .track-list li a:active {
       border-bottom: none;
-      color: #bb6cf1; }
+      color: #27A0BE; }
     .track-list li a .remix-label {
       color: rgba(0, 0, 0, 0.6);
       display: block;
@@ -1643,9 +1640,8 @@ h2.home {
     margin: 3rem auto 0 auto;
     max-width: 550px; }
   .song-container .instrumental-label {
-    color: rgba(0, 0, 0, 0.6);
+    color: rgba(0, 0, 0, 0.4);
     font-size: 1rem;
-    font-style: italic;
     margin: 1rem auto;
     text-align: center; }
   .song-container .song-analysis {
@@ -1704,7 +1700,7 @@ h2.home {
           padding: 0.75rem 0;
           width: auto; }
         .song-container .album-track-list .track-list li:before {
-          color: black; }
+          color: #333; }
         .song-container .album-track-list .track-list li p {
           font-size: 1rem;
           margin: 0.5rem 0; }
@@ -1715,7 +1711,7 @@ h2.home {
           color: rgba(0, 0, 0, 0.4); }
         .song-container .album-track-list .track-list li.this-track p {
           color: rgba(0, 0, 0, 0.4);
-          padding: 0.75rem 0 0.75rem 2.25rem; }
+          padding: 0.75rem 0 0.75rem 2.5rem; }
   .song-container .album-grid.song {
     display: flex;
     justify-content: flex-start; }
@@ -1778,7 +1774,7 @@ h2.home {
       color: rgba(0, 0, 0, 0.4); }
     .miscellanea-overview .type a:hover, .miscellanea-overview .type a:active {
       border-bottom: none;
-      color: black; }
+      color: #333; }
   .miscellanea-overview h1.title-other {
     font-family: "Sorts Mill Goudy", Georgia, serif;
     font-size: 2.4rem;
@@ -1881,7 +1877,7 @@ h2.home {
     font-size: 4.4rem;
     line-height: 110%; }
   .commentary-container .attribution {
-    border-bottom: 1px solid black;
+    border-bottom: 1px solid #333;
     padding-bottom: 0.5rem; }
     @media all and (max-width: 900px) {
       .commentary-container .attribution {
@@ -1908,7 +1904,7 @@ h2.home {
         color: rgba(0, 0, 0, 0.6); }
       .commentary-container .attribution .type a:hover,
       .commentary-container .attribution .type a:active {
-        color: #bb6cf1; }
+        color: #27A0BE; }
   .commentary-container .description {
     margin-bottom: 1rem;
     max-width: 600px; }

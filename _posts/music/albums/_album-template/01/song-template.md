@@ -1,13 +1,14 @@
 ---
 layout: song
 category: songs
-permalink: /music/[ album ]/:title
+permalink: /music/[ album-name ]/:title
 
 title:
 album:
 track_number:
 artists:
 instrumental: [yes]
+bonus: [yes]
 original_version_url: (if remix) [ album ]/[ :title ]
 original_version_title: “[ song title ]” from <i>[ Album title ]</i>
 

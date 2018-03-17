@@ -10,7 +10,8 @@ title: Call Me By Your Name
 track_count: 3
 label: Sony Masterworks
 artists: Sufjan Stevens
-producer: 
+producer:
+copyright: 2017 Madison Gate Records, Inc.
 
 images:
 - source: call-me-by-your-name-cover.jpg

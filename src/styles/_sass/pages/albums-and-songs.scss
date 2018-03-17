@@ -14,6 +14,15 @@
 		}
 }
 
+.copyright {
+	color: $color-tertiary;
+	font-size: $type-smaller;
+
+	&.with-lyrics { margin-top: -4rem; }
+
+	&.instrumental { text-align: center; }
+}
+
 .album-container.overview,
 .album-container.tracks {
 	margin-left: 34%;
@@ -124,6 +133,8 @@
 } // .album-meta
 
 .album-container.tracks {
+	margin-bottom: 6rem; 
+
 	@media all and (max-width: $break-small) { margin: 3rem auto 0 auto; }
 
 	> h2 { 
@@ -142,7 +153,7 @@
 
 .track-list {
 	list-style: none;
-	margin: 3rem auto 6rem auto;
+	margin-top: 3rem;
 
 	li {
 		border-bottom: 1px solid $faint-grey;
@@ -353,9 +364,8 @@ $break-song: 820px;
 	}
 
 	.instrumental-label {
-		color: $color-secondary;
+		color: $color-tertiary;
 		font-size: $type-normal;
-		font-style: italic;
 		margin: 1rem auto;
 		text-align: center;
 	}
@@ -460,7 +470,7 @@ $break-song: 820px;
 
 					p {
 						color: rgba(0, 0, 0, 0.4);
-						padding: 0.75rem 0 0.75rem 2.25rem; 
+						padding: 0.75rem 0 0.75rem 2.5rem; 
 					}
 				
 				} //.this-track 

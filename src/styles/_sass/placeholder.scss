@@ -1,0 +1,48 @@
+.temp-container {
+  display: flex;
+  margin: 14vh auto;
+  max-width: 1200px;
+
+  @media all and (max-width: $break-medium) { 
+    display: block;
+    margin-top: 2rem;
+  }
+
+  figure {margin: 0;}
+
+  img { width: 100%; }
+
+  .text {
+    padding: 1rem 4rem;
+    width: 65%;
+
+    .label {
+      font-family: 'IBM Plex Mono';
+      font-size: 13px;
+      margin: 3rem 0 -1.2rem 0;
+    }
+
+    h1 {
+      font-size: 28px;
+      font-weight: 500;
+    }
+
+    p { font-size: 16px; }
+
+    a:link,
+    a:visited {
+      border-bottom: 1px solid $color-primary;
+    }
+
+    a:hover,
+    a:active { 
+      border-bottom: 1px solid $color-accent;
+      color: $color-accent;
+    }
+
+    li { 
+      list-style-type: none;
+      padding-left: 2rem;
+    }
+  }
+}

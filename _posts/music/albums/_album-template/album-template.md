@@ -1,14 +1,15 @@
 ---
 layout: album
 category: music
-lightbox: yes
-permalink: /music/:title.html
+permalink: /:title.html
 
-title: 
-type: [album, EP, collaboration]
+type: [LP, EP, collaboration, unreleased]
+title_primary:
+title_secondary:
 artists: Sufjan Stevens, 
 track_count: 
-label: 
+label:
+thumbnail: [164px wide]
 location: 
 producer:
 copyright:
@@ -16,9 +17,26 @@ copyright:
 bandcamp_album_id:
 bandcamp_album_link:
 
+discs:
+- disc_number:
+  disc_title:
+  disc_thumbnail:
+- disc_number:
+  disc_title:
+  disc_thumbnail:
+
 images:
-- source: [carrie-and-lowell-cover.jpg]
-  description: 
+- source: [album-name-cover.jpg]
+  description:
+- source: [album-image-1.jpg]
+  description:
+
+reviews:
+- title:
+  url:
+  author:
+  source:
+  date:
 
 
 ---

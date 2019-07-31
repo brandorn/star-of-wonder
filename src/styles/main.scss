@@ -9,7 +9,7 @@
 $color-primary: #333;
 $color-secondary: rgba(0, 0, 0, 0.6);
 $color-tertiary: rgba(0, 0, 0, 0.4);
-$color-accent: #27A0BE;
+$color-accent: #E71238;
 
 .color-secondary { 
   color: $color-secondary; 
@@ -50,13 +50,7 @@ $break-tiny: 400px;
    ================================ */
 
 @import
+  "temp-landing",
   "fonts",
-  "base",
-  "nav",
-  "img",
-  "features",
-  "pages/home",
-  "pages/indexes",
-  "pages/albums-and-songs",
-  "pages/miscellanea-and-commentary"
+  "base"
 ;

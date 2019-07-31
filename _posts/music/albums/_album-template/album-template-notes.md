@@ -1,6 +1,0 @@
----
-category: albums
-
-album:
----
-

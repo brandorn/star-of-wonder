@@ -1,139 +1,30 @@
-
-
-/* === Serif === */
-
 @font-face {
-  src: url(../../src/fonts/Calluna-Regular.otf);
-  font-family: 'Calluna';
+  src: url(../../src/fonts/BentonSans-Medium.ttf);
+  font-family: 'Benton Sans';
   font-style: normal;
-  font-weight: normal;
+  font-weight: 500;
 }
 
 @font-face {
-  src: url(../../src/fonts/Calluna-Italic.otf);
-  font-family: 'Calluna';
-  font-style: italic;
+  src: url(../../src/fonts/BentonSans-Regular.ttf);
+  font-family: 'Benton Sans';
+  font-style: normal;
   font-weight: normal;
 } 
 
-@font-face {
-  src: url(../../src/fonts/Calluna-Semibold.otf);
-  font-family: 'Calluna';
-  font-style: normal;
-  font-weight: 500;
-}
-
-@font-face {
-  src: url(../../src/fonts/Calluna-Semibold-Italic.otf);
-  font-family: 'Calluna';
-  font-style: italic;
-  font-weight: 500;
-}
-
-@font-face {
-  src: url(../../src/fonts/Calluna-Bold.otf);
-  font-family: 'Calluna';
-  font-style: normal;
-  font-weight: bold;
-}
-
-@font-face {
-  src: url(../../src/fonts/Calluna-Bold-Italic.otf);
-  font-family: 'Calluna';
-  font-style: italic;
-  font-weight: bold;
-}
-
-// $serif: 'Calluna', Georgia, serif;
-$serif: 'Calluna', Georgia, serif;
-.serif { font-family: $serif; }
-
-
-/* === Serif Alt === */
-
-@font-face {
-  src: url(../../src/fonts/GoudyStM.otf);
-  font-family: 'Sorts Mill Goudy';
-  font-style: normal;
-  font-weight: normal;
-}
-
-@font-face {
-  src: url(../../src/fonts/GoudyStM-Italic.otf);
-  font-family: 'Sorts Mill Goudy';
-  font-style: italic;
-  font-weight: normal;
-}
-
-
-$serif-alt: "Sorts Mill Goudy", Georgia, serif;
-.serif-alt { font-family: $serif-alt; }
-
-
-/* === Sans-serif === */
-
-@font-face {
-  src: url(../../src/fonts/HelveticaNeue-Regular.ttf);
-  font-family: 'Helvetica Neue';
-  font-style: normal;
-  font-weight: normal;
-}
-
-@font-face {
-  src: url(../../src/fonts/HelveticaNeue-Italic.ttf);
-  font-family: 'Helvetica Neue';
-  font-style: italic;
-  font-weight: normal;
-} 
-
-@font-face {
-  src: url(../../src/fonts/HelveticaNeue-Medium.ttf);
-  font-family: 'Helvetica Neue';
-  font-style: normal;
-  font-weight: 500;
-}
-
-@font-face {
-  src: url(../../src/fonts/HelveticaNeue-Medium-Italic.ttf);
-  font-family: 'Helvetica Neue';
-  font-style: italic;
-  font-weight: 500;
-}
-
-@font-face {
-  src: url(../../src/fonts/HelveticaNeue-Bold.ttf);
-  font-family: 'Helvetica Neue';
-  font-style: normal;
-  font-weight: bold;
-}
-
-@font-face {
-  src: url(../../src/fonts/HelveticaNeue-Bold-Italic.ttf);
-  font-family:'Helvetica Neue';
-  font-style: italic;
-  font-weight: bold;
-}
-
-$sans-serif: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Helvetica, Roboto, Arial, sans-serif;
+$sans-serif: 'Benton Sans', -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Helvetica, Roboto, Arial, sans-serif;
 .sans-serif { font-family: $sans-serif; }
 
+
+
 @font-face {
-  src: url(../../src/fonts/Bungee-Shade.otf);
-  font-family: 'Bungee';
+  src: url(../../src/fonts/IBMPlexMono-Regular.otf);
+  font-family: 'IBM Plex Mono';
   font-style: normal;
   font-weight: normal;
 }
 
-/* === Mono === */
-
-@font-face {
-  src: url(../../src/fonts/Inconsolata.otf);
-  font-family: 'Inconsolata';
-  font-style: normal;
-  font-weight: normal;
-}
-
-$mono: "Inconsolata", "Consolas", mono;
+$mono: 'IBM Plex Mono', 'Consolas', mono;
 .mono { font-family: $mono; }
 
 /* Font sizes
